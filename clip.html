@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Clip</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #player, #tap { position: fixed; inset: 0; width: 100vw; height: 100vh; border: 0; }
+  #tap { z-index: 2; background: transparent; }
+</style>
+</head>
+<body>
+<div id="player"></div>
+<div id="tap"></div>
+<script>
+  // Plays one YouTube clip filling the whole screen, unmuted, and restarts it every time it ends.
+  // ?v=<videoId> picks the clip (default: The Wolf Of Wall Street - I'm Not Leaving).
+  var vid = new URLSearchParams(location.search).get('v') || 'PVDH3MX4MYI';
+  var player;
+  var s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      width: '100%', height: '100%', videoId: vid,
+      playerVars: { autoplay: 1, controls: 0, rel: 0, playsinline: 1, modestbranding: 1, iv_load_policy: 3, fs: 0, origin: location.origin },
+      events: {
+        onReady: function (e) { e.target.unMute(); e.target.setVolume(100); e.target.playVideo(); },
+        onStateChange: function (e) { if (e.data === YT.PlayerState.ENDED) { e.target.seekTo(0, true); e.target.playVideo(); } }
+      }
+    });
+  }
+  // a click/tap (or the remote's OK button) counts as a user gesture: unmute and play
+  function kick() { if (player && player.unMute) { player.unMute(); player.setVolume(100); player.playVideo(); } }
+  document.getElementById('tap').addEventListener('click', kick);
+  document.addEventListener('keydown', kick);
+</script>
+</body>
+</html>
