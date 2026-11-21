@@ -6,7 +6,7 @@
     "banner":  [
                    {
                        "strong":  "Onsite / required:",
-                       "text":  "BOM vs Received / onsite comparison R5g (QC-Foreman PASS WITH NOTES; QA confirmed EB8841C6; the team signed off; workbook F02937CE). Onsite per BOM line = the larger of PO log / tracker received and Sortly (on hand in the tool\u0027s folders, or picked to the tool); the two are never added. Required = BOM qty. Secondary figure: lines fully received on the PO log / tracker alone.",
+                       "text":  "BOM vs Received / onsite comparison R6 (inputs: tracker and PO log 11-20, Sortly 11-19, pick lists through 10-30, BOM list 11-07; R5g method; PO-inbox status 11-06). Onsite per BOM line = the larger of PO log / tracker received and Sortly (on hand in the tool\u0027s folders, or picked to the tool); the two are never added. Required = BOM qty. Secondary figure: lines fully received on the PO log / tracker alone.",
                        "tv":  true,
                        "tv_text":  "R5g (QC passed, QA confirmed); onsite = larger of tracker received and Sortly per line, never added; \"rcvd\" = tracker basis."
                    },
@@ -24,13 +24,13 @@
                    },
                    {
                        "strong":  "What this board cannot see yet:",
-                       "text":  "Sortly pick lists only run to 10-30: material issued after that counts only if it is still in a tool folder. 4,813 of 6,273 required BOM lines (76.7%) are not found on a tool PO / tracker line or in the tool\u0027s Sortly stock (bulk, ALL or other-tool POs, unmatched descriptions). 14 tools have no BOM in the library, so they have no fraction.",
+                       "text":  "Sortly pick lists only run to 10-30: material issued after that counts only if it is still in a tool folder. 4,643 of 6,273 required BOM lines (74.0%) are not found on a tool PO / tracker line or in the tool\u0027s Sortly stock (bulk, ALL or other-tool POs, unmatched descriptions). 14 tools have no BOM in the library, so they have no fraction.",
                        "tv":  true,
-                       "tv_text":  "picks after 10-30; 4,813 of 6,273 lines (76.7%) not found anywhere; 14 tools have no BOM."
+                       "tv_text":  "picks after 10-30; 4,643 of 6,273 lines (74.0%) not found anywhere; 14 tools have no BOM."
                    },
                    {
                        "strong":  "per PM direction 2026-11-07 rules (R5g):",
-                       "text":  "Sortly wins on tracker lines, also when lower; on a BOM line onsite stays the larger of tracker and Sortly (23 lines where Sortly is higher, 38 where it is lower). 759 Demo for Billing stock counts when a received 759 PO or a DEMO PO booked to ALL covers it (8 of 23 SIDs count). 2FP and 28D are added from their library BOMs (2FP provisional). Tool 234 is excluded.",
+                       "text":  "Sortly wins on tracker lines, also when lower; on a BOM line onsite stays the larger of tracker and Sortly (23 lines where Sortly is higher, 40 where it is lower). 759 Demo for Billing stock counts when a received 759 PO or a DEMO PO booked to ALL covers it (8 of 23 SIDs count). 2FP and 28D are added from their library BOMs (2FP provisional). Tool 234 is excluded.",
                        "tv":  false,
                        "tv_text":  ""
                    }
@@ -39,22 +39,22 @@
                       {
                           "key":  "po_tracker",
                           "label":  "PO log / tracker pull",
-                          "iso":  "2026-11-06T11:24",
-                          "text":  "Fri Nov 6, 11:24 AM",
-                          "age_working_days":  10,
-                          "stale":  true,
+                          "iso":  "2026-11-20T15:34",
+                          "text":  "Fri Nov 20, 3:34 PM",
+                          "age_working_days":  0,
+                          "stale":  false,
                           "missing":  false,
-                          "status":  "QC passed (11-06 12:14)",
+                          "status":  "QC passed (11-20 15:42)",
                           "note":  "tracker-received and ordered quantities",
                           "trace":  "by_tool \u0027Source stamp\u0027 (tracker / PO log \u0027saved\u0027 times)"
                       },
                       {
                           "key":  "sortly",
                           "label":  "Sortly snapshot",
-                          "iso":  "2026-11-06T06:40",
-                          "text":  "Fri Nov 6, 6:40 AM",
-                          "age_working_days":  10,
-                          "stale":  true,
+                          "iso":  "2026-11-19T15:37",
+                          "text":  "Thu Nov 19, 3:37 PM",
+                          "age_working_days":  1,
+                          "stale":  false,
                           "missing":  false,
                           "status":  "onsite basis (on hand)",
                           "note":  "Sortly on hand in tool folders",
@@ -75,13 +75,13 @@
                       {
                           "key":  "comparison",
                           "label":  "Comparison build",
-                          "iso":  "2026-11-07T10:53",
-                          "text":  "Sat Nov 7, 10:53 AM",
-                          "age_working_days":  10,
-                          "stale":  true,
+                          "iso":  "2026-11-21T04:38",
+                          "text":  "Sat Nov 21, 4:38 AM",
+                          "age_working_days":  0,
+                          "stale":  false,
                           "missing":  false,
-                          "status":  "QC passed, QA confirmed (R5g)",
-                          "note":  "BOM vs Received / onsite R5g",
+                          "status":  "R6 built 11-21 (pending QC)",
+                          "note":  "BOM vs Received / onsite R6 (this week)",
                           "trace":  "by_tool \u0027Source stamp\u0027 (\u0027built\u0027 time)"
                       },
                       {
@@ -133,6 +133,18 @@
                           "trace":  "Tool aliases.csv Date column (pinned by hash)"
                       },
                       {
+                          "key":  "bom",
+                          "label":  "BOM list (requirements) dated",
+                          "iso":  "2026-11-07T08:21",
+                          "text":  "Sat Nov 7, 8:21 AM",
+                          "age_working_days":  10,
+                          "stale":  true,
+                          "missing":  false,
+                          "status":  "R5e list; newer BOMs not yet converted",
+                          "note":  "BOM lines required per tool",
+                          "trace":  "BOM list CSV file time (pinned by hash)"
+                      },
+                      {
                           "key":  "novus",
                           "label":  "Novus long-lead list dated",
                           "iso":  "2026-10-26T00:00",
@@ -160,8 +172,8 @@
                        },
     "as_of":  {
                   "label":  "As of PO log / tracker pull",
-                  "iso":  "2026-11-06T11:24",
-                  "text":  "Fri Nov 6, 2026, 11:24 AM"
+                  "iso":  "2026-11-20T15:34",
+                  "text":  "Fri Nov 20, 2026, 3:34 PM"
               },
     "overlay":  {
                     "label":  "PO-inbox status",
@@ -1566,6 +1578,17 @@
                                       {
                                           "data_row":  9,
                                           "tool":  "759",
+                                          "sid":  "SO923T81220",
+                                          "item":  "1/4\" SWG Plug SC11 Clean ( SS-CPA-4 )",
+                                          "unit":  "ea",
+                                          "supply_before":  15,
+                                          "supply_after":  15,
+                                          "counts":  true,
+                                          "bom_lines":  ""
+                                      },
+                                      {
+                                          "data_row":  10,
+                                          "tool":  "759",
                                           "sid":  "SO923T79276",
                                           "item":  "Female Cap, 1/2\" VCR, 316L Cap, 1/2 FVCR, HTC, 316L (P-CF-1/2)",
                                           "unit":  "ea",
@@ -1575,7 +1598,7 @@
                                           "bom_lines":  ""
                                       },
                                       {
-                                          "data_row":  10,
+                                          "data_row":  11,
                                           "tool":  "759",
                                           "sid":  "SO923T76740",
                                           "item":  "1/2\" SWG Cap (SS-810-P)",
@@ -1586,7 +1609,7 @@
                                           "bom_lines":  ""
                                       },
                                       {
-                                          "data_row":  11,
+                                          "data_row":  12,
                                           "tool":  "759",
                                           "sid":  "SO923T77994",
                                           "item":  "1/2\"  VCR Gasket - SS, W/Retainer, Non Pltd 044718 (UJR-9.52RE-RG-0)",
@@ -1597,7 +1620,7 @@
                                           "bom_lines":  "759-0115, 759-0116"
                                       },
                                       {
-                                          "data_row":  12,
+                                          "data_row":  13,
                                           "tool":  "759",
                                           "sid":  "SO923T79429",
                                           "item":  "3/4\" SWG Cap, SC11 Clean (7108L-SS-3/4-OC)",
@@ -1608,7 +1631,7 @@
                                           "bom_lines":  ""
                                       },
                                       {
-                                          "data_row":  13,
+                                          "data_row":  14,
                                           "tool":  "759",
                                           "sid":  "SO923T81123",
                                           "item":  "1-1/2\" CAP - PVC, Socket, 847-015 S80",
@@ -1619,18 +1642,18 @@
                                           "bom_lines":  ""
                                       },
                                       {
-                                          "data_row":  14,
+                                          "data_row":  15,
                                           "tool":  "759",
                                           "sid":  "SO923T70566",
                                           "item":  "1/4\" VCR Gasket - 316L Stainless Steel VCR Face SEAL Fitting, 1/4 in. Silve… (SS-4-VCR-2-GR)",
                                           "unit":  "ea",
-                                          "supply_before":  10,
-                                          "supply_after":  0,
+                                          "supply_before":  11,
+                                          "supply_after":  1,
                                           "counts":  false,
                                           "bom_lines":  "759-0113, 759-0114, 759-0513, 759-0514, 759-0515, 759-0516, 759-0517, 759-0518, 759-0519, 759-0520"
                                       },
                                       {
-                                          "data_row":  15,
+                                          "data_row":  16,
                                           "tool":  "759",
                                           "sid":  "SO923T81214",
                                           "item":  "1/2 Cap Soc Weld PVC S80 D-2467",
@@ -1641,29 +1664,7 @@
                                           "bom_lines":  ""
                                       },
                                       {
-                                          "data_row":  16,
-                                          "tool":  "759",
-                                          "sid":  "SO923T81220",
-                                          "item":  "1/4\" SWG Plug SC11 Clean ( SS-CPA-4 )",
-                                          "unit":  "ea",
-                                          "supply_before":  15,
-                                          "supply_after":  15,
-                                          "counts":  true,
-                                          "bom_lines":  ""
-                                      },
-                                      {
                                           "data_row":  17,
-                                          "tool":  "759",
-                                          "sid":  "SO923T80305",
-                                          "item":  "1\" Plug SWG ( SS-1610-P )",
-                                          "unit":  "units",
-                                          "supply_before":  4,
-                                          "supply_after":  0,
-                                          "counts":  false,
-                                          "bom_lines":  ""
-                                      },
-                                      {
-                                          "data_row":  18,
                                           "tool":  "759",
                                           "sid":  "SO923T72521",
                                           "item":  "1/4\" VCR Cap, 316SS, SC11 Cleaned (SS-4-VCR-CP-SC11)",
@@ -1674,7 +1675,7 @@
                                           "bom_lines":  ""
                                       },
                                       {
-                                          "data_row":  19,
+                                          "data_row":  18,
                                           "tool":  "759",
                                           "sid":  "SO923T75203",
                                           "item":  "3/4\" Union - Compression, SWG x SWG (SS-1210-6)",
@@ -1683,6 +1684,17 @@
                                           "supply_after":  0,
                                           "counts":  false,
                                           "bom_lines":  "759-0724, 759-0725"
+                                      },
+                                      {
+                                          "data_row":  19,
+                                          "tool":  "759",
+                                          "sid":  "SO923T72765",
+                                          "item":  "1\" SWG Cap, SC11 Clean (SS-1610-CSC11)",
+                                          "unit":  "ea",
+                                          "supply_before":  6,
+                                          "supply_after":  2,
+                                          "counts":  false,
+                                          "bom_lines":  ""
                                       },
                                       {
                                           "data_row":  20,
@@ -1698,10 +1710,10 @@
                                       {
                                           "data_row":  21,
                                           "tool":  "759",
-                                          "sid":  "SO923T79858",
-                                          "item":  "1/2\" SWG Plug SC11 Clean (SS-810-CSC11)",
-                                          "unit":  "ea",
-                                          "supply_before":  8,
+                                          "sid":  "SO923T80305",
+                                          "item":  "1\" Plug SWG ( SS-1610-P )",
+                                          "unit":  "units",
+                                          "supply_before":  4,
                                           "supply_after":  0,
                                           "counts":  false,
                                           "bom_lines":  ""
@@ -1709,10 +1721,10 @@
                                       {
                                           "data_row":  22,
                                           "tool":  "759",
-                                          "sid":  "SO923T72765",
-                                          "item":  "1\" SWG Cap, SC11 Clean (SS-1610-CSC11)",
+                                          "sid":  "SO923T79858",
+                                          "item":  "1/2\" SWG Plug SC11 Clean (SS-810-CSC11)",
                                           "unit":  "ea",
-                                          "supply_before":  6,
+                                          "supply_before":  10,
                                           "supply_after":  2,
                                           "counts":  false,
                                           "bom_lines":  ""
@@ -1738,9 +1750,9 @@
                                                          "demo_all_counted"
                                                      ],
                                            "fully_onsite":  false,
-                                           "onsite":  0,
+                                           "onsite":  1,
                                            "required":  18,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1752,7 +1764,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1788,7 +1800,7 @@
                                            "fully_onsite":  true,
                                            "onsite":  7,
                                            "required":  1,
-                                           "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1341 \u0027SWG CAP\u0027; received tracker line(s) r1341 200/200, r1342 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1350 \u0027SWG CAP\u0027; received tracker line(s) r1350 200/200, r1351 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1800,7 +1812,7 @@
                                            "fully_onsite":  true,
                                            "onsite":  1,
                                            "required":  1,
-                                           "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1341 \u0027SWG CAP\u0027; received tracker line(s) r1341 200/200, r1342 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1350 \u0027SWG CAP\u0027; received tracker line(s) r1350 200/200, r1351 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1812,7 +1824,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1824,7 +1836,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1836,7 +1848,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1848,7 +1860,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1860,7 +1872,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1872,7 +1884,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1884,7 +1896,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1896,7 +1908,7 @@
                                            "fully_onsite":  false,
                                            "onsite":  0,
                                            "required":  3,
-                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                           "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                        },
                                        {
                                            "tool":  "759",
@@ -1924,7 +1936,7 @@
                                        }
                                    ],
                          "sortly_higher_lines":  23,
-                         "sortly_lower_lines":  38
+                         "sortly_lower_lines":  40
                      },
     "schedule_order":  {
                            "board_tools_not_on_schedule":  [
@@ -1996,8 +2008,8 @@
                      ],
     "limits":  {
                    "required_lines":  6273,
-                   "not_found":  4813,
-                   "pct_not_found":  "76.7",
+                   "not_found":  4643,
+                   "pct_not_found":  "74.0",
                    "no_bom_tools":  [
                                         "2DE",
                                         "23B",
@@ -2025,26 +2037,26 @@
                },
     "sources":  {
                     "by_tool":  {
-                                    "file":  "BOM vs Received comparison 2026-11-07 R5g - By tool.csv",
-                                    "path":  "BOM vs Received comparison 2026-11-07 R5g - By tool.csv",
-                                    "sha256":  "9D695D2D507B334E4EC11D8A37C07658F4C43E40DF2354498837BBB49CE17B45",
+                                    "file":  "BOM vs Received comparison 2026-11-21 R6 - By tool.csv",
+                                    "path":  "BOM vs Received comparison 2026-11-21 R6 - By tool.csv",
+                                    "sha256":  "487ADF145A8810A4E857EE98B977E3D5182C6A9BF465954D59F8788ADF4245CE",
                                     "rows":  39,
                                     "row_key":  "Tool",
-                                    "status":  "QC passed, QA confirmed (R5g)"
+                                    "status":  "R6 built 11-21 (pending QC)"
                                 },
                     "by_line":  {
-                                    "file":  "BOM vs Received comparison 2026-11-07 R5g - By line.csv",
-                                    "path":  "BOM vs Received comparison 2026-11-07 R5g - By line.csv",
-                                    "sha256":  "0C55E2425059953D8C4C48F4C64F547315DA2E3DDED40CCB8ECB4AF7E92DB8BF",
+                                    "file":  "BOM vs Received comparison 2026-11-21 R6 - By line.csv",
+                                    "path":  "BOM vs Received comparison 2026-11-21 R6 - By line.csv",
+                                    "sha256":  "BF4D334F76FC6321D374683AD6FEC55CF0FC69558D0A6DE7A6CC68D2147D79E4",
                                     "rows":  6362,
                                     "row_key":  "Line ID",
-                                    "status":  "QC passed, QA confirmed (R5g)"
+                                    "status":  "R6 built 11-21 (pending QC)"
                                 },
                     "by_tool_sources":  {
-                                            "file":  "BOM vs Received comparison 2026-11-07 R5g - By tool.sources.csv",
-                                            "path":  "BOM vs Received comparison 2026-11-07 R5g - By tool.sources.csv",
-                                            "sha256":  "D9ADB04D80AC3424F059AD3A10F78BF4F20682B7568F76B3979E5074A262F4B8",
-                                            "status":  "QC passed, QA confirmed (R5g)"
+                                            "file":  "BOM vs Received comparison 2026-11-21 R6 - By tool.sources.csv",
+                                            "path":  "BOM vs Received comparison 2026-11-21 R6 - By tool.sources.csv",
+                                            "sha256":  "B10CF50B17886FF7C5749AC7019F4A3B4FDCD1DA2CF4DC0A2F213416E8311A7C",
+                                            "status":  "R6 built 11-21 (pending QC)"
                                         },
                     "comparison_stamps_checked":  [
                                                       {
@@ -2055,17 +2067,17 @@
                                                       {
                                                           "role":  "parts tracker",
                                                           "file":  "parts_tracker.xlsx",
-                                                          "sha256":  "6011B227CD77AE47E9D067C199564696788D8B0D385FCCFE5F96D0CCA73AAFED"
+                                                          "sha256":  "074B941C13E8EFF67760A25F23ACA29AD4F170AA46D349EEB71003004EBBC7EF"
                                                       },
                                                       {
                                                           "role":  "PO log",
                                                           "file":  "PO_log.xlsx",
-                                                          "sha256":  "DDC7236FD57D7F68CC9635807BEFAE907D09BB36AC6F4CACABC154C22CE4EC04"
+                                                          "sha256":  "8641801B8B7C31369B7F90CF515DBEB27B9B06CF4666ECCDE6DDD692C8175AB9"
                                                       },
                                                       {
                                                           "role":  "Sortly snapshot",
-                                                          "file":  "Sortly inventory - current.csv",
-                                                          "sha256":  "9A168B6FF3C721BC546ABBCA68856DD4BE406C310D55D4DEBA0842257E10F7CD"
+                                                          "file":  "Sortly inventory 2026-11-19 1537.csv",
+                                                          "sha256":  "DBDB7B7168213C8F6F005EC586C5F3DA5902DD8D6EAEF7B7F1B0D970C4CFCDEF"
                                                       },
                                                       {
                                                           "role":  "feed workbook",
@@ -2110,16 +2122,16 @@
                     "demo_stock":  {
                                        "file":  "demo_stock_759.csv",
                                        "path":  "demo_stock_759.csv",
-                                       "sha256":  "E6EEA0CB9AE16F37836996C09DA16896B2B395713E03F72D97D26EC7EC73B305",
+                                       "sha256":  "19F2B2C02A4002F7506B80D0D3E289D54825E80F5642161E52FDE82660CBE3BE",
                                        "rows":  23,
                                        "row_key":  "SID",
                                        "status":  "Analyst R5g build output (frozen copy)",
                                        "use":  "759 demo-billing SID count"
                                    },
                     "sortly_snapshot":  {
-                                            "file":  "Sortly inventory - current.csv",
-                                            "path":  "Sortly inventory - current.csv",
-                                            "sha256":  "9A168B6FF3C721BC546ABBCA68856DD4BE406C310D55D4DEBA0842257E10F7CD",
+                                            "file":  "Sortly inventory 2026-11-19 1537.csv",
+                                            "path":  "Sortly inventory 2026-11-19 1537.csv",
+                                            "sha256":  "DBDB7B7168213C8F6F005EC586C5F3DA5902DD8D6EAEF7B7F1B0D970C4CFCDEF",
                                             "use":  "freshness only (CapturedAt)"
                                         },
                     "pick_lists":  {
@@ -2147,7 +2159,7 @@
                     "r67":  {
                                 "file":  "MICRON_Tool_Tracker_FOR_SUITS_R67.xlsx",
                                 "path":  "MICRON_Tool_Tracker_FOR_SUITS_R67.xlsx",
-                                "sha256":  "882C0B9BB4DCF17F5E6F3D957AE27BFD82ADA07136D68DC47FD47681DD98DE4B",
+                                "sha256":  "3433CE796AE075939D28EB563A3B29FDBEFB0E0BDA903EA9FCBD3CE3DD11FEFB",
                                 "use":  "DDFD status (Glenn\u0027s Tab column O, hook-up row) and, from Rev F6, BOM status / Book Sent (Tool List I / O); frozen copy, OpenXML"
                             },
                     "schedule":  {
@@ -2159,9 +2171,9 @@
                                      "use":  "tile order only (read-only, OpenXML)"
                                  }
                 },
-    "builder_sha256":  "1D47DB1A0AAA3F188BD29D189270B093CB853BA4C9DEB75FF5FD6758B02DB331",
-    "built_at":  "2026-11-21T04:09:57",
-    "built_at_text":  "Nov 21, 2026, 4:09 AM",
+    "builder_sha256":  "5013003E02A8069AC3FCF274BBFDDF5AFE97D5D24A23DCA687AC8445E9B97342",
+    "built_at":  "2026-11-21T05:09:35",
+    "built_at_text":  "Nov 21, 2026, 5:09 AM",
     "counts":  {
                    "tools":  39,
                    "schedule_only_tiles":  5,
@@ -2170,27 +2182,32 @@
                    "partial":  9,
                    "none":  14,
                    "lines_required":  6273,
-                   "lines_onsite":  877,
+                   "lines_onsite":  997,
                    "onsite_evidence":  {
-                                           "tracker":  216,
-                                           "sortly":  547,
-                                           "both":  114
+                                           "tracker":  218,
+                                           "sortly":  661,
+                                           "both":  118
                                        },
-                   "lines_any_onsite":  1088,
-                   "lines_received":  321,
-                   "lines_ordered":  323,
-                   "lines_any_receipt":  370,
+                   "lines_any_onsite":  1228,
+                   "lines_received":  327,
+                   "lines_ordered":  329,
+                   "lines_any_receipt":  378,
                    "onsite_status":  {
-                                         "fully_onsite":  877,
-                                         "partly_onsite":  211,
-                                         "matched_no_qty":  371,
-                                         "ordered_not_onsite":  1,
-                                         "not_found":  4813
+                                         "fully_onsite":  997,
+                                         "partly_onsite":  231,
+                                         "matched_no_qty":  399,
+                                         "ordered_not_onsite":  3,
+                                         "not_found":  4643
                                      },
                    "material_lines":  6358,
-                   "lines_not_on_po":  5906,
+                   "lines_not_on_po":  5893,
                    "trace":  "sum over tools[] of the same field (each tool traces to its by_tool row and by_line rows)"
                },
+    "po_inbox_stale":  {
+                           "label":  "PO status as of 11-06 (refresh pending)",
+                           "tiles":  "PO chips hidden on the tiles; hover card keeps them under the label",
+                           "by_tool_source":  "BOM vs Received comparison 2026-11-07 R5g - By tool.csv"
+                       },
     "r67_bom":  {
                     "rule":  "R67 is the master (11-21): BOM status and Book Sent from R67 Tool List I / O; library BOM figures unchanged; Complete with no comparison figures reads n/a",
                     "source":  "R67 Tool List columns I / O (frozen copy)",
@@ -2912,18 +2929,17 @@
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  15,
-                                      "fully_received":  12,
+                                      "lines":  17,
+                                      "fully_received":  14,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  15,
+                                      "not_on_bom":  17,
                                       "cancelled":  0
                                   },
                       "flags":  [
-                                    "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12).",
-                                    "1 overlay line(s) on POs not on the PO log yet (ordered only)."
+                                    "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines received this build 12/15 vs feed 7/15.",
+                      "cross_check":  "Tracker lines this build 14/17 fully received vs feed (Nov 2 build) 7/15.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -3080,7 +3096,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "1 / 1 / 0 / 0 / 0 / 0 of 1 lines with an overlay row",
-                                              "ordered_lines_added":  1
+                                              "ordered_lines_added":  1,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -3178,7 +3195,7 @@
                                             },
                                             {
                                                 "unit":  "ea",
-                                                "qty":  162
+                                                "qty":  158
                                             },
                                             {
                                                 "unit":  "each",
@@ -3190,7 +3207,7 @@
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  174
+                                                "qty":  173
                                             }
                                         ],
                       "tracker":  {
@@ -3311,7 +3328,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -3542,10 +3560,10 @@
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  80,
-                                      "fully_received":  68,
+                                      "lines":  81,
+                                      "fully_received":  77,
                                       "matched_to_bom":  34,
-                                      "not_on_bom":  46,
+                                      "not_on_bom":  47,
                                       "cancelled":  0
                                   },
                       "flags":  [
@@ -3809,7 +3827,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "6 / 6 / 0 / 0 / 1 / 0 of 6 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -3973,34 +3992,34 @@
                                             },
                                             {
                                                 "unit":  "ea",
-                                                "qty":  784
+                                                "qty":  541
                                             },
                                             {
                                                 "unit":  "each",
-                                                "qty":  1238
+                                                "qty":  1324
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  1640
+                                                "qty":  1430
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  157
+                                                "qty":  142
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  17,
-                                      "fully_received":  8,
+                                      "lines":  36,
+                                      "fully_received":  26,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  17,
+                                      "not_on_bom":  36,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12).",
-                                    "Sortly lower than the documents on 1 tracker line(s); Sortly governs (per PM direction 2026-11-07: \u0027sortly is the winner\u0027): r1250 14326-005-88DVAL-02."
+                                    "Sortly lower than the documents on 1 tracker line(s); Sortly governs (per PM direction 2026-11-07: \u0027sortly is the winner\u0027): r1257 14326-005-88DVAL-02."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 8/17 fully received vs feed (Nov 2 build) 5/9.",
+                      "cross_check":  "Tracker lines this build 26/36 fully received vs feed (Nov 2 build) 5/9.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -4332,7 +4351,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "7 / 6 / 0 / 0 / 1 / 1 of 7 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -4556,7 +4576,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -4689,7 +4710,7 @@
                       "sortly_supply":  [
                                             {
                                                 "unit":  "ea",
-                                                "qty":  23
+                                                "qty":  41
                                             },
                                             {
                                                 "unit":  "each",
@@ -4697,7 +4718,7 @@
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  105
+                                                "qty":  126
                                             },
                                             {
                                                 "unit":  "units",
@@ -4729,7 +4750,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -4790,12 +4812,12 @@
                       "tool":  "26V",
                       "bom_status":  "full",
                       "lines_required":  284,
-                      "lines_onsite":  61,
-                      "lines_any_onsite":  74,
-                      "pct_onsite":  21.5,
+                      "lines_onsite":  65,
+                      "lines_any_onsite":  76,
+                      "pct_onsite":  22.9,
                       "onsite_evidence":  {
                                               "tracker":  24,
-                                              "sortly":  31,
+                                              "sortly":  35,
                                               "both":  6
                                           },
                       "lines_received":  30,
@@ -4805,27 +4827,27 @@
                       "lines_any_order":  33,
                       "lines_not_on_po":  245,
                       "onsite_status":  {
-                                            "fully_onsite":  61,
-                                            "partly_onsite":  13,
+                                            "fully_onsite":  65,
+                                            "partly_onsite":  11,
                                             "matched_no_qty":  12,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  198
+                                            "not_found":  196
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  350,
+                                      "onsite":  364,
                                       "received":  114,
                                       "ordered":  114,
-                                      "in_sortly":  256,
+                                      "in_sortly":  270,
                                       "required":  1669
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  1252,
+                                      "onsite":  1257,
                                       "received":  770,
                                       "ordered":  770,
-                                      "in_sortly":  607,
+                                      "in_sortly":  617,
                                       "required":  2551
                                   },
                                   {
@@ -4843,30 +4865,34 @@
                                                 "qty":  80
                                             },
                                             {
+                                                "unit":  "ea",
+                                                "qty":  104
+                                            },
+                                            {
                                                 "unit":  "each",
-                                                "qty":  1692
+                                                "qty":  1649
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  1327
+                                                "qty":  1427
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  227
+                                                "qty":  230
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  69,
-                                      "fully_received":  65,
+                                      "lines":  70,
+                                      "fully_received":  67,
                                       "matched_to_bom":  43,
-                                      "not_on_bom":  26,
+                                      "not_on_bom":  27,
                                       "cancelled":  2
                                   },
                       "flags":  [
-                                    "6 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
+                                    "5 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 65/69 fully received vs feed (Nov 2 build) 65/65. Feed level 3 = Done (everything ordered is received) but only 61/284 BOM lines are fully onsite (21.5%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
+                      "cross_check":  "Tracker lines this build 67/70 fully received vs feed (Nov 2 build) 65/65. Feed level 3 = Done (everything ordered is received) but only 65/284 BOM lines are fully onsite (22.9%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -5080,22 +5106,12 @@
                                              "onsite":  60,
                                              "required":  60,
                                              "text":  "Sortly lower than PO / tracker received on this line (Sortly 40 \u003c 60): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
-                                         },
-                                         {
-                                             "line_id":  "26V-0252",
-                                             "by_line_row":  4483,
-                                             "kinds":  [
-                                                           "sortly_lower"
-                                                       ],
-                                             "fully_onsite":  true,
-                                             "onsite":  10,
-                                             "required":  10,
-                                             "text":  "Sortly lower than PO / tracker received on this line (Sortly 5 \u003c 10): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
                                          }
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "4 / 4 / 0 / 2 / 0 / 0 of 4 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -5106,7 +5122,7 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 26V and \u0027Fully onsite\u0027 in (Y, N)  [284 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [74 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [76 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
                                                                                   "26V-0001",
@@ -5149,11 +5165,14 @@
                                                                                   "26V-0178",
                                                                                   "26V-0179",
                                                                                   "26V-0180",
+                                                                                  "26V-0182",
                                                                                   "26V-0183",
                                                                                   "26V-0184",
                                                                                   "26V-0185",
+                                                                                  "26V-0187",
                                                                                   "26V-0188",
                                                                                   "26V-0189",
+                                                                                  "26V-0190",
                                                                                   "26V-0193",
                                                                                   "26V-0194",
                                                                                   "26V-0202",
@@ -5163,6 +5182,7 @@
                                                                                   "26V-0212",
                                                                                   "26V-0214",
                                                                                   "26V-0225",
+                                                                                  "26V-0242",
                                                                                   "26V-0246",
                                                                                   "26V-0247",
                                                                                   "26V-0248",
@@ -5259,42 +5279,42 @@
                       "tool":  "90D",
                       "bom_status":  "full",
                       "lines_required":  447,
-                      "lines_onsite":  82,
-                      "lines_any_onsite":  97,
-                      "pct_onsite":  18.3,
+                      "lines_onsite":  106,
+                      "lines_any_onsite":  121,
+                      "pct_onsite":  23.7,
                       "onsite_evidence":  {
-                                              "tracker":  2,
-                                              "sortly":  80,
+                                              "tracker":  5,
+                                              "sortly":  101,
                                               "both":  0
                                           },
-                      "lines_received":  2,
-                      "pct_received":  0.4,
-                      "lines_any_receipt":  2,
-                      "lines_ordered":  3,
-                      "lines_any_order":  3,
-                      "lines_not_on_po":  444,
+                      "lines_received":  5,
+                      "pct_received":  1.1,
+                      "lines_any_receipt":  6,
+                      "lines_ordered":  6,
+                      "lines_any_order":  9,
+                      "lines_not_on_po":  437,
                       "onsite_status":  {
-                                            "fully_onsite":  82,
+                                            "fully_onsite":  106,
                                             "partly_onsite":  15,
-                                            "matched_no_qty":  34,
-                                            "ordered_not_onsite":  1,
-                                            "not_found":  315
+                                            "matched_no_qty":  38,
+                                            "ordered_not_onsite":  3,
+                                            "not_found":  285
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  728,
-                                      "received":  4,
-                                      "ordered":  6,
-                                      "in_sortly":  724,
+                                      "onsite":  851,
+                                      "received":  31,
+                                      "ordered":  55,
+                                      "in_sortly":  820,
                                       "required":  3535
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  846,
+                                      "onsite":  1266,
                                       "received":  0,
                                       "ordered":  0,
-                                      "in_sortly":  846,
+                                      "in_sortly":  1266,
                                       "required":  2425
                                   },
                                   {
@@ -5313,15 +5333,15 @@
                                             },
                                             {
                                                 "unit":  "ea",
-                                                "qty":  19
+                                                "qty":  619
                                             },
                                             {
                                                 "unit":  "each",
-                                                "qty":  2653
+                                                "qty":  2211
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  2250
+                                                "qty":  3750
                                             },
                                             {
                                                 "unit":  "set",
@@ -5329,21 +5349,21 @@
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  107
+                                                "qty":  169
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  18,
-                                      "fully_received":  8,
-                                      "matched_to_bom":  2,
-                                      "not_on_bom":  16,
+                                      "lines":  28,
+                                      "fully_received":  19,
+                                      "matched_to_bom":  5,
+                                      "not_on_bom":  23,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "90D book TRANSMITTAL says 444 line items; CONSOLIDATED BOM has 447 rows (all used). the BOM author item."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 8/18 fully received vs feed (Nov 2 build) 7/9.",
+                      "cross_check":  "Tracker lines this build 19/28 fully received vs feed (Nov 2 build) 7/9.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -5623,7 +5643,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "6 / 6 / 0 / 0 / 0 / 0 of 8 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -5634,29 +5655,34 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 90D and \u0027Fully onsite\u0027 in (Y, N)  [447 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [97 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [121 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
                                                                                   "90D-0001",
                                                                                   "90D-0003",
                                                                                   "90D-0004",
+                                                                                  "90D-0006",
                                                                                   "90D-0008",
                                                                                   "90D-0011",
                                                                                   "90D-0013",
                                                                                   "90D-0015",
                                                                                   "90D-0020",
+                                                                                  "90D-0021",
                                                                                   "90D-0022",
                                                                                   "90D-0024",
                                                                                   "90D-0025",
                                                                                   "90D-0026",
                                                                                   "90D-0027",
+                                                                                  "90D-0029",
                                                                                   "90D-0031",
                                                                                   "90D-0040",
+                                                                                  "90D-0041",
                                                                                   "90D-0042",
-                                                                                  "90D-0058",
+                                                                                  "90D-0051",
                                                                                   "90D-0066",
                                                                                   "90D-0069",
                                                                                   "90D-0076",
+                                                                                  "90D-0082",
                                                                                   "90D-0083",
                                                                                   "90D-0085",
                                                                                   "90D-0096",
@@ -5672,20 +5698,36 @@
                                                                                   "90D-0153",
                                                                                   "90D-0154",
                                                                                   "90D-0155",
+                                                                                  "90D-0157",
+                                                                                  "90D-0158",
+                                                                                  "90D-0159",
                                                                                   "90D-0162",
                                                                                   "90D-0164",
                                                                                   "90D-0165",
                                                                                   "90D-0166",
                                                                                   "90D-0168",
                                                                                   "90D-0170",
+                                                                                  "90D-0172",
                                                                                   "90D-0176",
                                                                                   "90D-0178",
                                                                                   "90D-0179",
                                                                                   "90D-0180",
+                                                                                  "90D-0185",
+                                                                                  "90D-0187",
+                                                                                  "90D-0188",
+                                                                                  "90D-0189",
+                                                                                  "90D-0190",
+                                                                                  "90D-0191",
+                                                                                  "90D-0192",
+                                                                                  "90D-0194",
                                                                                   "90D-0195",
+                                                                                  "90D-0196",
+                                                                                  "90D-0199",
                                                                                   "90D-0202",
                                                                                   "90D-0203",
+                                                                                  "90D-0207",
                                                                                   "90D-0208",
+                                                                                  "90D-0214",
                                                                                   "90D-0215",
                                                                                   "90D-0216",
                                                                                   "90D-0241",
@@ -5699,7 +5741,9 @@
                                                                                   "90D-0265",
                                                                                   "90D-0266",
                                                                                   "90D-0270",
+                                                                                  "90D-0272",
                                                                                   "90D-0273",
+                                                                                  "90D-0279",
                                                                                   "90D-0292",
                                                                                   "90D-0293",
                                                                                   "90D-0299",
@@ -5718,9 +5762,13 @@
                                                                                   "90D-0392",
                                                                                   "90D-0393",
                                                                                   "90D-0396",
+                                                                                  "90D-0409",
                                                                                   "90D-0431"
                                                                               ],
                                                     "fully_received_line_ids":  [
+                                                                                    "90D-0021",
+                                                                                    "90D-0041",
+                                                                                    "90D-0051",
                                                                                     "90D-0292",
                                                                                     "90D-0335"
                                                                                 ]
@@ -5967,39 +6015,38 @@
                       "sortly_supply":  [
                                             {
                                                 "unit":  "ct",
-                                                "qty":  129
+                                                "qty":  109
                                             },
                                             {
                                                 "unit":  "ea",
-                                                "qty":  817
+                                                "qty":  360
                                             },
                                             {
                                                 "unit":  "each",
-                                                "qty":  659
+                                                "qty":  895
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  4958
+                                                "qty":  2816
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  238
+                                                "qty":  136
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  18,
-                                      "fully_received":  14,
+                                      "lines":  29,
+                                      "fully_received":  21,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  18,
+                                      "not_on_bom":  29,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12).",
-                                    "5 overlay line(s) on POs not on the PO log yet (ordered only).",
                                     "Feed row 37: H \u0027Levels done\u0027 = 0 while E and F = Done (feed cell, reported only)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 14/18 fully received vs feed (Nov 2 build) 2/6.",
+                      "cross_check":  "Tracker lines this build 21/29 fully received vs feed (Nov 2 build) 2/6.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -6588,7 +6635,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "15 / 5 / 0 / 1 / 0 / 10 of 15 lines with an overlay row",
-                                              "ordered_lines_added":  5
+                                              "ordered_lines_added":  5,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -6696,33 +6744,37 @@
                                             },
                                             {
                                                 "unit":  "ct",
-                                                "qty":  10
+                                                "qty":  15
+                                            },
+                                            {
+                                                "unit":  "ea",
+                                                "qty":  551
                                             },
                                             {
                                                 "unit":  "each",
-                                                "qty":  786
+                                                "qty":  467
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  850
+                                                "qty":  1470
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  58
+                                                "qty":  160
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  11,
-                                      "fully_received":  10,
+                                      "lines":  21,
+                                      "fully_received":  11,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  11,
+                                      "not_on_bom":  21,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 10/11 fully received vs feed (Nov 2 build) 10/10.",
+                      "cross_check":  "Tracker lines this build 11/21 fully received vs feed (Nov 2 build) 10/10.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -6799,7 +6851,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "1 / 1 / 0 / 0 / 0 / 0 of 1 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -6860,42 +6913,42 @@
                       "tool":  "759",
                       "bom_status":  "full",
                       "lines_required":  903,
-                      "lines_onsite":  80,
-                      "lines_any_onsite":  104,
-                      "pct_onsite":  8.9,
+                      "lines_onsite":  95,
+                      "lines_any_onsite":  123,
+                      "pct_onsite":  10.5,
                       "onsite_evidence":  {
-                                              "tracker":  11,
-                                              "sortly":  49,
-                                              "both":  20
+                                              "tracker":  13,
+                                              "sortly":  61,
+                                              "both":  21
                                           },
-                      "lines_received":  30,
-                      "pct_received":  3.3,
-                      "lines_any_receipt":  33,
-                      "lines_ordered":  31,
-                      "lines_any_order":  35,
-                      "lines_not_on_po":  843,
+                      "lines_received":  33,
+                      "pct_received":  3.7,
+                      "lines_any_receipt":  37,
+                      "lines_ordered":  34,
+                      "lines_any_order":  39,
+                      "lines_not_on_po":  838,
                       "onsite_status":  {
-                                            "fully_onsite":  80,
-                                            "partly_onsite":  24,
-                                            "matched_no_qty":  107,
+                                            "fully_onsite":  95,
+                                            "partly_onsite":  28,
+                                            "matched_no_qty":  123,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  692
+                                            "not_found":  657
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  154,
-                                      "received":  16,
-                                      "ordered":  18,
-                                      "in_sortly":  138,
+                                      "onsite":  188,
+                                      "received":  26,
+                                      "ordered":  28,
+                                      "in_sortly":  162,
                                       "required":  3001
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  1956,
+                                      "onsite":  2036,
                                       "received":  1140,
                                       "ordered":  1160,
-                                      "in_sortly":  1656,
+                                      "in_sortly":  1746,
                                       "required":  6257
                                   },
                                   {
@@ -6918,37 +6971,37 @@
                                             },
                                             {
                                                 "unit":  "ea",
-                                                "qty":  31
+                                                "qty":  250
                                             },
                                             {
                                                 "unit":  "each",
-                                                "qty":  979
+                                                "qty":  845
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  2246
+                                                "qty":  2406
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  55
+                                                "qty":  85
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  35,
-                                      "fully_received":  31,
-                                      "matched_to_bom":  13,
-                                      "not_on_bom":  22,
+                                      "lines":  40,
+                                      "fully_received":  35,
+                                      "matched_to_bom":  14,
+                                      "not_on_bom":  26,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "PROVISIONAL: 759 requirement is R1 (BOM WITH SORTLY R1) pending the BOM author: R1 vs R9 (QA Issue 3).",
                                     "759 Demo for Billing stock (per PM direction 2026-11-07: counts only with a received 759 PO; R5e: DEMO POs booked to ALL count too, \u0027yes to demo po\u0027): 8 SID(s) counted, 15 not counted (sheet Demo stock 759).",
-                                    "Sortly lower than the documents on 1 tracker line(s); Sortly governs (per PM direction 2026-11-07: \u0027sortly is the winner\u0027): r655 14326-004-759VAL-04.",
-                                    "2 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only).",
+                                    "Sortly lower than the documents on 1 tracker line(s); Sortly governs (per PM direction 2026-11-07: \u0027sortly is the winner\u0027): r661 14326-004-759VAL-04.",
+                                    "3 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only).",
                                     "759 DEMO PO lines (14326-007-MATVAT-05 / -06, PO log tool \"759 DEMO\") count as received for 759 (per PM direction 2026-11-06: \"yes the 759 caps count\")."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 31/35 fully received vs feed (Nov 2 build) 26/27.",
+                      "cross_check":  "Tracker lines this build 35/40 fully received vs feed (Nov 2 build) 26/27.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -6987,9 +7040,9 @@
                                                            "demo_all_counted"
                                                        ],
                                              "fully_onsite":  false,
-                                             "onsite":  0,
+                                             "onsite":  1,
                                              "required":  18,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0114",
@@ -7000,7 +7053,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0115",
@@ -7044,7 +7097,7 @@
                                              "fully_onsite":  true,
                                              "onsite":  7,
                                              "required":  1,
-                                             "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1341 \u0027SWG CAP\u0027; received tracker line(s) r1341 200/200, r1342 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1350 \u0027SWG CAP\u0027; received tracker line(s) r1350 200/200, r1351 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0198",
@@ -7055,7 +7108,7 @@
                                              "fully_onsite":  true,
                                              "onsite":  1,
                                              "required":  1,
-                                             "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1341 \u0027SWG CAP\u0027; received tracker line(s) r1341 200/200, r1342 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T79326: Counted: (d) Sortly note on SO923T79326 names 14326-007-MATVAT-13 (written \u002714326-007-MATVAT-13\u0027) (PO log tool ALL DEMO; per PM direction 2026-11-07: \"yes to demo po\"); item / size match on received tracker r1350 \u0027SWG CAP\u0027; received tracker line(s) r1350 200/200, r1351 200/200 | 759 demo stock SO923T79326 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0454",
@@ -7077,7 +7130,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0514",
@@ -7088,7 +7141,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0515",
@@ -7099,7 +7152,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0516",
@@ -7110,7 +7163,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0517",
@@ -7121,7 +7174,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0518",
@@ -7132,7 +7185,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0519",
@@ -7143,7 +7196,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0520",
@@ -7154,7 +7207,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  3,
-                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 10 -\u003e 0) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
+                                             "text":  "759 demo stock SO923T70566: Not counted: no received 759 / ALL DEMO PO covers this material (demo on hand 10, demo picks 10; supply 11 -\u003e 1) | 759 demo stock SO923T70566 counted through an ALL DEMO PO"
                                          },
                                          {
                                              "line_id":  "759-0536",
@@ -7165,7 +7218,7 @@
                                              "fully_onsite":  true,
                                              "onsite":  30,
                                              "required":  30,
-                                             "text":  "Sortly lower (tracker line): r655 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
+                                             "text":  "Sortly lower than PO / tracker received on this line (Sortly 10 \u003c 30): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only) | Sortly lower (tracker line): r661 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
                                          },
                                          {
                                              "line_id":  "759-0537",
@@ -7176,7 +7229,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  10,
                                              "required":  65,
-                                             "text":  "Sortly lower (tracker line): r655 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
+                                             "text":  "Sortly lower (tracker line): r661 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
                                          },
                                          {
                                              "line_id":  "759-0538",
@@ -7187,7 +7240,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  65,
-                                             "text":  "Sortly lower (tracker line): r655 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
+                                             "text":  "Sortly lower (tracker line): r661 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
                                          },
                                          {
                                              "line_id":  "759-0539",
@@ -7198,7 +7251,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  80,
-                                             "text":  "Sortly lower (tracker line): r655 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
+                                             "text":  "Sortly lower (tracker line): r661 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
                                          },
                                          {
                                              "line_id":  "759-0540",
@@ -7209,7 +7262,7 @@
                                              "fully_onsite":  false,
                                              "onsite":  0,
                                              "required":  60,
-                                             "text":  "Sortly lower (tracker line): r655 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
+                                             "text":  "Sortly lower (tracker line): r661 14326-004-759VAL-04: Tracker received 60 -\u003e 40 of 60 from Sortly notes on SO923T79901 (tracker SORT#)"
                                          },
                                          {
                                              "line_id":  "759-0724",
@@ -7236,7 +7289,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -7247,7 +7301,7 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 759 and \u0027Fully onsite\u0027 in (Y, N)  [903 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [104 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [123 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
                                                                                   "759-0008",
@@ -7274,10 +7328,13 @@
                                                                                   "759-0144",
                                                                                   "759-0147",
                                                                                   "759-0148",
+                                                                                  "759-0177",
+                                                                                  "759-0178",
                                                                                   "759-0179",
                                                                                   "759-0180",
                                                                                   "759-0181",
                                                                                   "759-0193",
+                                                                                  "759-0195",
                                                                                   "759-0197",
                                                                                   "759-0198",
                                                                                   "759-0203",
@@ -7290,6 +7347,9 @@
                                                                                   "759-0264",
                                                                                   "759-0265",
                                                                                   "759-0278",
+                                                                                  "759-0310",
+                                                                                  "759-0364",
+                                                                                  "759-0366",
                                                                                   "759-0367",
                                                                                   "759-0378",
                                                                                   "759-0449",
@@ -7305,11 +7365,18 @@
                                                                                   "759-0531",
                                                                                   "759-0536",
                                                                                   "759-0541",
+                                                                                  "759-0552",
+                                                                                  "759-0553",
+                                                                                  "759-0554",
+                                                                                  "759-0555",
+                                                                                  "759-0561",
+                                                                                  "759-0562",
                                                                                   "759-0578",
                                                                                   "759-0579",
                                                                                   "759-0580",
                                                                                   "759-0581",
                                                                                   "759-0623",
+                                                                                  "759-0647",
                                                                                   "759-0648",
                                                                                   "759-0649",
                                                                                   "759-0650",
@@ -7318,10 +7385,12 @@
                                                                                   "759-0653",
                                                                                   "759-0654",
                                                                                   "759-0655",
+                                                                                  "759-0684",
                                                                                   "759-0697",
                                                                                   "759-0702",
                                                                                   "759-0722",
                                                                                   "759-0733",
+                                                                                  "759-0734",
                                                                                   "759-0737",
                                                                                   "759-0738",
                                                                                   "759-0754",
@@ -7357,6 +7426,9 @@
                                                                                     "759-0456",
                                                                                     "759-0536",
                                                                                     "759-0541",
+                                                                                    "759-0553",
+                                                                                    "759-0554",
+                                                                                    "759-0555",
                                                                                     "759-0578",
                                                                                     "759-0580",
                                                                                     "759-0581",
@@ -7416,42 +7488,42 @@
                       "tool":  "2F6",
                       "bom_status":  "full",
                       "lines_required":  504,
-                      "lines_onsite":  104,
-                      "lines_any_onsite":  120,
-                      "pct_onsite":  20.6,
+                      "lines_onsite":  116,
+                      "lines_any_onsite":  132,
+                      "pct_onsite":  23,
                       "onsite_evidence":  {
-                                              "tracker":  16,
-                                              "sortly":  79,
-                                              "both":  9
+                                              "tracker":  15,
+                                              "sortly":  91,
+                                              "both":  10
                                           },
                       "lines_received":  25,
                       "pct_received":  5,
                       "lines_any_receipt":  25,
                       "lines_ordered":  25,
-                      "lines_any_order":  25,
-                      "lines_not_on_po":  478,
+                      "lines_any_order":  26,
+                      "lines_not_on_po":  477,
                       "onsite_status":  {
-                                            "fully_onsite":  104,
+                                            "fully_onsite":  116,
                                             "partly_onsite":  16,
-                                            "matched_no_qty":  70,
+                                            "matched_no_qty":  71,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  314
+                                            "not_found":  301
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  1249,
+                                      "onsite":  1371,
                                       "received":  111,
                                       "ordered":  111,
-                                      "in_sortly":  1141,
+                                      "in_sortly":  1343,
                                       "required":  5143
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  2365,
+                                      "onsite":  2555,
                                       "received":  580,
-                                      "ordered":  580,
-                                      "in_sortly":  2145,
+                                      "ordered":  620,
+                                      "in_sortly":  2335,
                                       "required":  4935
                                   },
                                   {
@@ -7473,12 +7545,16 @@
                                                 "qty":  10
                                             },
                                             {
+                                                "unit":  "ea",
+                                                "qty":  541
+                                            },
+                                            {
                                                 "unit":  "each",
-                                                "qty":  3648
+                                                "qty":  3378
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  3540
+                                                "qty":  4498
                                             },
                                             {
                                                 "unit":  "set",
@@ -7486,14 +7562,14 @@
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  131
+                                                "qty":  137
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  30,
-                                      "fully_received":  25,
-                                      "matched_to_bom":  9,
-                                      "not_on_bom":  21,
+                                      "lines":  34,
+                                      "fully_received":  27,
+                                      "matched_to_bom":  10,
+                                      "not_on_bom":  24,
                                       "cancelled":  1
                                   },
                       "flags":  [
@@ -7503,7 +7579,7 @@
                                     "1 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 25/30 fully received vs feed (Nov 2 build) 25/25.",
+                      "cross_check":  "Tracker lines this build 27/34 fully received vs feed (Nov 2 build) 25/25.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -7717,7 +7793,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "5 / 5 / 0 / 0 / 0 / 0 of 5 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -7728,7 +7805,7 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 2F6 and \u0027Fully onsite\u0027 in (Y, N)  [504 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [120 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [132 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
                                                                                   "2F6-0012",
@@ -7789,6 +7866,7 @@
                                                                                   "2F6-0239",
                                                                                   "2F6-0240",
                                                                                   "2F6-0303",
+                                                                                  "2F6-0305",
                                                                                   "2F6-0306",
                                                                                   "2F6-0309",
                                                                                   "2F6-0317",
@@ -7798,6 +7876,7 @@
                                                                                   "2F6-0328",
                                                                                   "2F6-0332",
                                                                                   "2F6-0333",
+                                                                                  "2F6-0334",
                                                                                   "2F6-0345",
                                                                                   "2F6-0346",
                                                                                   "2F6-0355",
@@ -7806,6 +7885,8 @@
                                                                                   "2F6-0358",
                                                                                   "2F6-0359",
                                                                                   "2F6-0364",
+                                                                                  "2F6-0367",
+                                                                                  "2F6-0368",
                                                                                   "2F6-0375",
                                                                                   "2F6-0376",
                                                                                   "2F6-0388",
@@ -7821,11 +7902,19 @@
                                                                                   "2F6-0437",
                                                                                   "2F6-0442",
                                                                                   "2F6-0444",
+                                                                                  "2F6-0445",
                                                                                   "2F6-0446",
+                                                                                  "2F6-0466",
                                                                                   "2F6-0467",
                                                                                   "2F6-0468",
+                                                                                  "2F6-0469",
+                                                                                  "2F6-0470",
+                                                                                  "2F6-0471",
+                                                                                  "2F6-0474",
                                                                                   "2F6-0475",
+                                                                                  "2F6-0476",
                                                                                   "2F6-0477",
+                                                                                  "2F6-0479",
                                                                                   "2F6-0480",
                                                                                   "2F6-0481",
                                                                                   "2F6-0482",
@@ -7936,30 +8025,34 @@
                               ],
                       "sortly_supply":  [
                                             {
+                                                "unit":  "ea",
+                                                "qty":  340
+                                            },
+                                            {
                                                 "unit":  "each",
-                                                "qty":  524
+                                                "qty":  427
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  110
+                                                "qty":  906
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  2
+                                                "qty":  12
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  46,
-                                      "fully_received":  35,
+                                      "lines":  61,
+                                      "fully_received":  41,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  46,
+                                      "not_on_bom":  61,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 35/46 fully received vs feed (Nov 2 build) 27/45.",
+                      "cross_check":  "Tracker lines this build 41/61 fully received vs feed (Nov 2 build) 27/45.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -8036,7 +8129,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "1 / 1 / 0 / 1 / 0 / 0 of 1 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -8300,7 +8394,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -8573,7 +8668,11 @@
                       "sortly_supply":  [
                                             {
                                                 "unit":  "ea",
-                                                "qty":  16
+                                                "qty":  55
+                                            },
+                                            {
+                                                "unit":  "ft",
+                                                "qty":  170
                                             },
                                             {
                                                 "unit":  "units",
@@ -8605,7 +8704,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -8677,12 +8777,12 @@
                       "tool":  "H25",
                       "bom_status":  "partial",
                       "lines_required":  202,
-                      "lines_onsite":  29,
+                      "lines_onsite":  27,
                       "lines_any_onsite":  31,
-                      "pct_onsite":  14.4,
+                      "pct_onsite":  13.4,
                       "onsite_evidence":  {
                                               "tracker":  0,
-                                              "sortly":  29,
+                                              "sortly":  27,
                                               "both":  0
                                           },
                       "lines_received":  0,
@@ -8692,19 +8792,19 @@
                       "lines_any_order":  0,
                       "lines_not_on_po":  202,
                       "onsite_status":  {
-                                            "fully_onsite":  29,
-                                            "partly_onsite":  2,
-                                            "matched_no_qty":  1,
+                                            "fully_onsite":  27,
+                                            "partly_onsite":  4,
+                                            "matched_no_qty":  4,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  170
+                                            "not_found":  167
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  219,
+                                      "onsite":  216,
                                       "received":  0,
                                       "ordered":  0,
-                                      "in_sortly":  219,
+                                      "in_sortly":  216,
                                       "required":  1742
                                   },
                                   {
@@ -8727,7 +8827,7 @@
                       "sortly_supply":  [
                                             {
                                                 "unit":  "ea",
-                                                "qty":  2748
+                                                "qty":  2459
                                             },
                                             {
                                                 "unit":  "each",
@@ -8735,7 +8835,7 @@
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  3217
+                                                "qty":  2565
                                             },
                                             {
                                                 "unit":  "set",
@@ -8743,21 +8843,21 @@
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  56
+                                                "qty":  41
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  10,
-                                      "fully_received":  2,
+                                      "lines":  26,
+                                      "fully_received":  12,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  10,
+                                      "not_on_bom":  26,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Partial BOM: reference-tool SUD sheets or field takeoff only; fraction covers those lines only."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 2/10 fully received vs feed (Nov 2 build) 2/2. Feed level 3 = Done (everything ordered is received) but only 29/202 BOM lines are fully onsite (14.4%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
+                      "cross_check":  "Tracker lines this build 12/26 fully received vs feed (Nov 2 build) 2/2. Feed level 3 = Done (everything ordered is received) but only 27/202 BOM lines are fully onsite (13.4%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -9037,7 +9137,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "8 / 8 / 0 / 3 / 0 / 0 of 8 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -9051,6 +9152,8 @@
                                                     "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [31 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
+                                                                                  "H25-0001",
+                                                                                  "H25-0002",
                                                                                   "H25-0031",
                                                                                   "H25-0032",
                                                                                   "H25-0033",
@@ -9066,10 +9169,6 @@
                                                                                   "H25-0129",
                                                                                   "H25-0131",
                                                                                   "H25-0132",
-                                                                                  "H25-0151",
-                                                                                  "H25-0152",
-                                                                                  "H25-0153",
-                                                                                  "H25-0160",
                                                                                   "H25-0170",
                                                                                   "H25-0171",
                                                                                   "H25-0172",
@@ -9161,7 +9260,7 @@
                       "sortly_supply":  [
                                             {
                                                 "unit":  "ea",
-                                                "qty":  399
+                                                "qty":  1148
                                             },
                                             {
                                                 "unit":  "each",
@@ -9169,25 +9268,25 @@
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  1009
+                                                "qty":  3092
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  72
+                                                "qty":  95
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  9,
+                                      "lines":  13,
                                       "fully_received":  2,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  9,
+                                      "not_on_bom":  13,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 2/9 fully received vs feed (Nov 2 build) 2/5.",
+                      "cross_check":  "Tracker lines this build 2/13 fully received vs feed (Nov 2 build) 2/5.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -9521,7 +9620,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "4 / 4 / 0 / 4 / 0 / 0 of 4 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -9685,12 +9785,12 @@
                       "tool":  "363",
                       "bom_status":  "partial",
                       "lines_required":  240,
-                      "lines_onsite":  2,
-                      "lines_any_onsite":  2,
-                      "pct_onsite":  0.8,
+                      "lines_onsite":  11,
+                      "lines_any_onsite":  15,
+                      "pct_onsite":  4.6,
                       "onsite_evidence":  {
                                               "tracker":  2,
-                                              "sortly":  0,
+                                              "sortly":  9,
                                               "both":  0
                                           },
                       "lines_received":  2,
@@ -9700,27 +9800,27 @@
                       "lines_any_order":  2,
                       "lines_not_on_po":  244,
                       "onsite_status":  {
-                                            "fully_onsite":  2,
-                                            "partly_onsite":  0,
-                                            "matched_no_qty":  0,
+                                            "fully_onsite":  11,
+                                            "partly_onsite":  4,
+                                            "matched_no_qty":  3,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  238
+                                            "not_found":  222
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  4,
+                                      "onsite":  34,
                                       "received":  4,
                                       "ordered":  4,
-                                      "in_sortly":  0,
+                                      "in_sortly":  30,
                                       "required":  3069
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  0,
+                                      "onsite":  351,
                                       "received":  0,
                                       "ordered":  0,
-                                      "in_sortly":  0,
+                                      "in_sortly":  351,
                                       "required":  1557
                                   },
                                   {
@@ -9738,23 +9838,27 @@
                                                 "qty":  14
                                             },
                                             {
+                                                "unit":  "ea",
+                                                "qty":  482
+                                            },
+                                            {
                                                 "unit":  "each",
-                                                "qty":  55
+                                                "qty":  28
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  2
+                                                "qty":  2238
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  25
+                                                "qty":  38
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  12,
-                                      "fully_received":  11,
+                                      "lines":  34,
+                                      "fully_received":  13,
                                       "matched_to_bom":  1,
-                                      "not_on_bom":  11,
+                                      "not_on_bom":  33,
                                       "cancelled":  0
                                   },
                       "flags":  [
@@ -9762,7 +9866,7 @@
                                     "6 line(s) have no required qty in the BOM (excluded from fractions)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 11/12 fully received vs feed (Nov 2 build) 11/11. Feed level 3 = Done (everything ordered is received) but only 2/240 BOM lines are fully onsite (0.8%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
+                      "cross_check":  "Tracker lines this build 13/34 fully received vs feed (Nov 2 build) 11/11. Feed level 3 = Done (everything ordered is received) but only 11/240 BOM lines are fully onsite (4.6%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -9839,7 +9943,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "1 / 1 / 0 / 1 / 0 / 0 of 1 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -9850,11 +9955,20 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 363 and \u0027Fully onsite\u0027 in (Y, N)  [240 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [2 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [15 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
+                                                                                  "363-0001",
+                                                                                  "363-0006",
+                                                                                  "363-0020",
+                                                                                  "363-0029",
                                                                                   "363-0032",
-                                                                                  "363-0067"
+                                                                                  "363-0041",
+                                                                                  "363-0044",
+                                                                                  "363-0046",
+                                                                                  "363-0067",
+                                                                                  "363-0081",
+                                                                                  "363-0202"
                                                                               ],
                                                     "fully_received_line_ids":  [
                                                                                     "363-0032",
@@ -9913,12 +10027,12 @@
                       "tool":  "229",
                       "bom_status":  "full",
                       "lines_required":  300,
-                      "lines_onsite":  4,
-                      "lines_any_onsite":  7,
-                      "pct_onsite":  1.3,
+                      "lines_onsite":  45,
+                      "lines_any_onsite":  58,
+                      "pct_onsite":  15,
                       "onsite_evidence":  {
                                               "tracker":  1,
-                                              "sortly":  3,
+                                              "sortly":  44,
                                               "both":  0
                                           },
                       "lines_received":  1,
@@ -9928,27 +10042,27 @@
                       "lines_any_order":  1,
                       "lines_not_on_po":  300,
                       "onsite_status":  {
-                                            "fully_onsite":  4,
-                                            "partly_onsite":  3,
+                                            "fully_onsite":  45,
+                                            "partly_onsite":  13,
                                             "matched_no_qty":  4,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  289
+                                            "not_found":  238
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  52,
+                                      "onsite":  368,
                                       "received":  1,
                                       "ordered":  1,
-                                      "in_sortly":  51,
+                                      "in_sortly":  367,
                                       "required":  7071
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  0,
+                                      "onsite":  984,
                                       "received":  0,
                                       "ordered":  0,
-                                      "in_sortly":  0,
+                                      "in_sortly":  984,
                                       "required":  8223
                                   },
                                   {
@@ -9962,32 +10076,36 @@
                               ],
                       "sortly_supply":  [
                                             {
+                                                "unit":  "ea",
+                                                "qty":  669
+                                            },
+                                            {
                                                 "unit":  "each",
-                                                "qty":  70
+                                                "qty":  25
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  4
+                                                "qty":  988
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  14
+                                                "qty":  17
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  5,
+                                      "lines":  19,
                                       "fully_received":  1,
                                       "matched_to_bom":  1,
-                                      "not_on_bom":  4,
+                                      "not_on_bom":  18,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "229-0081 (header text) and 229-0140 (LABELS placeholder) excluded as Not material.",
                                     "1 line(s) have required qty 0 (excluded from fractions).",
-                                    "Sortly lower than the documents on 1 tracker line(s); Sortly governs (per PM direction 2026-11-07: \u0027sortly is the winner\u0027): r971 14326-005-229VAL-02."
+                                    "Sortly lower than the documents on 1 tracker line(s); Sortly governs (per PM direction 2026-11-07: \u0027sortly is the winner\u0027): r978 14326-005-229VAL-02."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 1/5 fully received vs feed (Nov 2 build) 2/2. Feed level 3 = Done (everything ordered is received) but only 4/300 BOM lines are fully onsite (1.3%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
+                      "cross_check":  "Tracker lines this build 1/19 fully received vs feed (Nov 2 build) 2/2. Feed level 3 = Done (everything ordered is received) but only 45/300 BOM lines are fully onsite (15%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -10127,12 +10245,13 @@
                                              "fully_onsite":  true,
                                              "onsite":  27,
                                              "required":  1,
-                                             "text":  "Sortly lower (tracker line): r971 14326-005-229VAL-02: Tracker received 30 -\u003e 27 of 30 from Sortly notes on SO923T79001 (only tracker line of this PO; no SORT# on the tracker; PO number written in the note resolved to 14326-005-229VAL-02; item type + size match)"
+                                             "text":  "Sortly lower (tracker line): r978 14326-005-229VAL-02: Tracker received 30 -\u003e 27 of 30 from Sortly notes on SO923T79001 (only tracker line of this PO; no SORT# on the tracker; PO number written in the note resolved to 14326-005-229VAL-02; item type + size match)"
                                          }
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "3 / 3 / 0 / 2 / 0 / 0 of 3 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -10143,13 +10262,54 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 229 and \u0027Fully onsite\u0027 in (Y, N)  [300 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [7 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [58 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
                                                                                   "229-0003",
+                                                                                  "229-0006",
+                                                                                  "229-0007",
+                                                                                  "229-0019",
+                                                                                  "229-0020",
+                                                                                  "229-0023",
+                                                                                  "229-0024",
+                                                                                  "229-0025",
+                                                                                  "229-0026",
+                                                                                  "229-0027",
+                                                                                  "229-0030",
+                                                                                  "229-0031",
+                                                                                  "229-0033",
+                                                                                  "229-0034",
+                                                                                  "229-0058",
+                                                                                  "229-0067",
+                                                                                  "229-0086",
+                                                                                  "229-0087",
+                                                                                  "229-0088",
+                                                                                  "229-0089",
+                                                                                  "229-0091",
+                                                                                  "229-0093",
+                                                                                  "229-0094",
+                                                                                  "229-0098",
                                                                                   "229-0104",
+                                                                                  "229-0108",
+                                                                                  "229-0119",
+                                                                                  "229-0125",
+                                                                                  "229-0126",
+                                                                                  "229-0127",
+                                                                                  "229-0131",
+                                                                                  "229-0132",
+                                                                                  "229-0133",
                                                                                   "229-0142",
-                                                                                  "229-0143"
+                                                                                  "229-0143",
+                                                                                  "229-0147",
+                                                                                  "229-0148",
+                                                                                  "229-0176",
+                                                                                  "229-0192",
+                                                                                  "229-0193",
+                                                                                  "229-0219",
+                                                                                  "229-0225",
+                                                                                  "229-0243",
+                                                                                  "229-0261",
+                                                                                  "229-0273"
                                                                               ],
                                                     "fully_received_line_ids":  [
                                                                                     "229-0104"
@@ -10347,7 +10507,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "1 / 1 / 0 / 1 / 0 / 0 of 1 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -10825,20 +10986,31 @@
                                   }
                               ],
                       "sortly_supply":  [
-
+                                            {
+                                                "unit":  "ea",
+                                                "qty":  1616
+                                            },
+                                            {
+                                                "unit":  "ft",
+                                                "qty":  3027
+                                            },
+                                            {
+                                                "unit":  "units",
+                                                "qty":  53
+                                            }
                                         ],
                       "tracker":  {
-                                      "lines":  13,
-                                      "fully_received":  8,
+                                      "lines":  30,
+                                      "fully_received":  15,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  13,
+                                      "not_on_bom":  30,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "Partial BOM: reference-tool SUD sheets or field takeoff only; fraction covers those lines only."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 8/13 fully received vs feed (Nov 2 build) 8/11.",
+                      "cross_check":  "Tracker lines this build 15/30 fully received vs feed (Nov 2 build) 8/11.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -10944,7 +11116,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "2 / 2 / 0 / 2 / 0 / 0 of 2 lines with an overlay row",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -11049,7 +11222,18 @@
                                   }
                               ],
                       "sortly_supply":  [
-
+                                            {
+                                                "unit":  "ea",
+                                                "qty":  77
+                                            },
+                                            {
+                                                "unit":  "ft",
+                                                "qty":  110
+                                            },
+                                            {
+                                                "unit":  "units",
+                                                "qty":  16
+                                            }
                                         ],
                       "tracker":  {
                                       "lines":  10,
@@ -11076,7 +11260,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -11185,7 +11370,7 @@
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  294
+                                                "qty":  287
                                             }
                                         ],
                       "tracker":  {
@@ -11254,7 +11439,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -11489,7 +11675,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -11766,7 +11953,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -11825,13 +12013,13 @@
                       "tool":  "231",
                       "bom_status":  "full",
                       "lines_required":  369,
-                      "lines_onsite":  38,
-                      "lines_any_onsite":  67,
-                      "pct_onsite":  10.3,
+                      "lines_onsite":  55,
+                      "lines_any_onsite":  86,
+                      "pct_onsite":  14.9,
                       "onsite_evidence":  {
-                                              "tracker":  22,
-                                              "sortly":  12,
-                                              "both":  4
+                                              "tracker":  20,
+                                              "sortly":  29,
+                                              "both":  6
                                           },
                       "lines_received":  26,
                       "pct_received":  7,
@@ -11840,27 +12028,27 @@
                       "lines_any_order":  37,
                       "lines_not_on_po":  332,
                       "onsite_status":  {
-                                            "fully_onsite":  38,
-                                            "partly_onsite":  29,
-                                            "matched_no_qty":  8,
+                                            "fully_onsite":  55,
+                                            "partly_onsite":  31,
+                                            "matched_no_qty":  9,
                                             "ordered_not_onsite":  0,
-                                            "not_found":  294
+                                            "not_found":  274
                                         },
                       "qty":  [
                                   {
                                       "unit":  "ea",
-                                      "onsite":  715,
+                                      "onsite":  789,
                                       "received":  287,
                                       "ordered":  287,
-                                      "in_sortly":  428,
+                                      "in_sortly":  502,
                                       "required":  7973
                                   },
                                   {
                                       "unit":  "ft",
-                                      "onsite":  4060,
+                                      "onsite":  4590,
                                       "received":  3590,
                                       "ordered":  3590,
-                                      "in_sortly":  1750,
+                                      "in_sortly":  2300,
                                       "required":  6736
                                   },
                                   {
@@ -11868,7 +12056,7 @@
                                       "onsite":  20,
                                       "received":  20,
                                       "ordered":  20,
-                                      "in_sortly":  0,
+                                      "in_sortly":  14,
                                       "required":  50
                                   },
                                   {
@@ -11882,32 +12070,36 @@
                               ],
                       "sortly_supply":  [
                                             {
+                                                "unit":  "ea",
+                                                "qty":  358
+                                            },
+                                            {
                                                 "unit":  "each",
-                                                "qty":  1409
+                                                "qty":  1258
                                             },
                                             {
                                                 "unit":  "ft",
-                                                "qty":  2168
+                                                "qty":  2823
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  14
+                                                "qty":  35
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  81,
-                                      "fully_received":  76,
+                                      "lines":  91,
+                                      "fully_received":  78,
                                       "matched_to_bom":  40,
-                                      "not_on_bom":  41,
+                                      "not_on_bom":  51,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "6 line(s) have required qty 0 (excluded from fractions).",
-                                    "Sortly higher than the documents on 1 tracker line(s) (per PM direction 2026-11-07): r1053 14326-005-231VAL-32.",
-                                    "3 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
+                                    "Sortly higher than the documents on 1 tracker line(s) (per PM direction 2026-11-07): r1060 14326-005-231VAL-32.",
+                                    "6 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines received this build 76/81 vs feed 75/81.",
+                      "cross_check":  "Tracker lines this build 78/91 fully received vs feed (Nov 2 build) 75/81.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -11949,11 +12141,45 @@
                                              "onsite":  80,
                                              "required":  80,
                                              "text":  "Sortly lower than PO / tracker received on this line (Sortly 40 \u003c 80): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
+                                         },
+                                         {
+                                             "line_id":  "231-0041",
+                                             "by_line_row":  2477,
+                                             "kinds":  [
+                                                           "sortly_lower"
+                                                       ],
+                                             "fully_onsite":  false,
+                                             "onsite":  20,
+                                             "required":  30,
+                                             "text":  "Sortly lower than PO / tracker received on this line (Sortly 10 \u003c 20): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
+                                         },
+                                         {
+                                             "line_id":  "231-0131",
+                                             "by_line_row":  2567,
+                                             "kinds":  [
+                                                           "sortly_lower"
+                                                       ],
+                                             "fully_onsite":  true,
+                                             "onsite":  20,
+                                             "required":  5,
+                                             "text":  "Sortly lower than PO / tracker received on this line (Sortly 15 \u003c 20): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
+                                         },
+                                         {
+                                             "line_id":  "231-0281",
+                                             "by_line_row":  2717,
+                                             "kinds":  [
+                                                           "sortly_lower"
+                                                       ],
+                                             "fully_onsite":  false,
+                                             "onsite":  20,
+                                             "required":  50,
+                                             "text":  "Sortly lower than PO / tracker received on this line (Sortly 14 \u003c 20): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
                                          }
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -11964,7 +12190,7 @@
                                     "by_line":  {
                                                     "source":  "by_line",
                                                     "required_rows":  "Tool = 231 and \u0027Fully onsite\u0027 in (Y, N)  [369 rows; excludes Not material, no-qty and qty-0 lines]",
-                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [67 rows]",
+                                                    "any_onsite_rule":  "\u0027Onsite qty (max of tracker, Sortly)\u0027 \u003e 0 on the required rows (bar hatch) [86 rows]",
                                                     "qty_rule":  "per unit (BOM unit: LF = ft, EA = ea, blank = (no unit)): sum of min(qty, Qty required) over the required rows",
                                                     "fully_onsite_line_ids":  [
                                                                                   "231-0001",
@@ -11977,6 +12203,7 @@
                                                                                   "231-0042",
                                                                                   "231-0043",
                                                                                   "231-0044",
+                                                                                  "231-0056",
                                                                                   "231-0060",
                                                                                   "231-0063",
                                                                                   "231-0067",
@@ -11984,26 +12211,42 @@
                                                                                   "231-0070",
                                                                                   "231-0071",
                                                                                   "231-0094",
+                                                                                  "231-0102",
+                                                                                  "231-0106",
                                                                                   "231-0108",
                                                                                   "231-0130",
                                                                                   "231-0131",
                                                                                   "231-0132",
+                                                                                  "231-0134",
+                                                                                  "231-0135",
+                                                                                  "231-0137",
+                                                                                  "231-0138",
                                                                                   "231-0139",
                                                                                   "231-0148",
                                                                                   "231-0149",
+                                                                                  "231-0155",
                                                                                   "231-0156",
                                                                                   "231-0159",
                                                                                   "231-0170",
+                                                                                  "231-0181",
+                                                                                  "231-0183",
+                                                                                  "231-0184",
                                                                                   "231-0193",
                                                                                   "231-0197",
                                                                                   "231-0198",
+                                                                                  "231-0200",
+                                                                                  "231-0208",
                                                                                   "231-0221",
                                                                                   "231-0231",
                                                                                   "231-0237",
                                                                                   "231-0250",
                                                                                   "231-0264",
                                                                                   "231-0306",
+                                                                                  "231-0319",
+                                                                                  "231-0320",
+                                                                                  "231-0323",
                                                                                   "231-0330",
+                                                                                  "231-0355",
                                                                                   "231-0360"
                                                                               ],
                                                     "fully_received_line_ids":  [
@@ -12116,7 +12359,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -12267,7 +12511,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -12421,7 +12666,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -12584,7 +12830,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -12743,7 +12990,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -12865,11 +13113,11 @@
                                             },
                                             {
                                                 "unit":  "ea",
-                                                "qty":  781
+                                                "qty":  642
                                             },
                                             {
                                                 "unit":  "each",
-                                                "qty":  4998
+                                                "qty":  5041
                                             },
                                             {
                                                 "unit":  "ft",
@@ -12889,19 +13137,18 @@
                                             }
                                         ],
                       "tracker":  {
-                                      "lines":  48,
-                                      "fully_received":  33,
+                                      "lines":  50,
+                                      "fully_received":  42,
                                       "matched_to_bom":  0,
-                                      "not_on_bom":  48,
+                                      "not_on_bom":  50,
                                       "cancelled":  0
                                   },
                       "flags":  [
                                     "82C: no BOM; tool page records a MATERIAL REQ 2026-09-29 (12 x 1/2in 20ft Swagelok hose, PCW; LIB-2026-0091) - not a BOM, no fraction.",
-                                    "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12).",
-                                    "1 overlay line(s) on POs not on the PO log yet (ordered only)."
+                                    "Feed level 1 \u0027BOM received\u0027 = Done but no BOM in the library (QA list of 12)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 33/48 fully received vs feed (Nov 2 build) 30/36.",
+                      "cross_check":  "Tracker lines this build 42/50 fully received vs feed (Nov 2 build) 30/36.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -13539,7 +13786,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "8 / 8 / 0 / 0 / 2 / 0 of 9 lines with an overlay row",
-                                              "ordered_lines_added":  1
+                                              "ordered_lines_added":  1,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -13697,7 +13945,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -13815,7 +14064,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -13956,7 +14206,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -14234,7 +14485,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -14506,7 +14758,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -14641,7 +14894,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
@@ -14730,7 +14984,7 @@
                                             },
                                             {
                                                 "unit":  "units",
-                                                "qty":  17
+                                                "qty":  14
                                             }
                                         ],
                       "tracker":  {
@@ -14758,7 +15012,8 @@
                                      ],
                       "by_tool_overlay":  {
                                               "status_text":  "",
-                                              "ordered_lines_added":  0
+                                              "ordered_lines_added":  0,
+                                              "source":  "PoInboxByToolCsv (11-06 comparison)"
                                           },
                       "trace":  {
                                     "by_tool":  {
