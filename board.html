@@ -193,9 +193,9 @@
     "banner":  [
                    {
                        "strong":  "Onsite / required:",
-                       "text":  "BOM vs Received / onsite comparison R7 (inputs: tracker and PO log 11-20, Sortly 11-21, pick lists through 11-21 with E35 / 34S / 255 mapped, BOM list R8 11-21; R5g method; PO status as of 11-21). Onsite per BOM line = the larger of PO log / tracker received and Sortly (on hand in the tool\u0027s folders, or picked to the tool); the two are never added. Required = BOM qty. Secondary figure: lines fully received on the PO log / tracker alone.",
+                       "text":  "BOM vs Received / onsite comparison R7 (inputs: tracker and PO log 11-20, Sortly 11-21, pick lists through 11-21 with E35 / 34S / 255 mapped, BOM list R8 11-21; R5g method; non-legend tracker greens counted as received (per PM direction 2026-11-21); PO status as of 11-21). Onsite per BOM line = the larger of PO log / tracker received and Sortly (on hand in the tool\u0027s folders, or picked to the tool); the two are never added. Required = BOM qty. Secondary figure: lines fully received on the PO log / tracker alone.",
                        "tv":  true,
-                       "tv_text":  "R7a (11-21); onsite = larger of tracker received and Sortly per line, never added; \"rcvd\" = tracker basis."
+                       "tv_text":  "R7b (11-21); onsite = larger of tracker received and Sortly per line, never added; \"rcvd\" = tracker basis."
                    },
                    {
                        "strong":  "PO-inbox status:",
@@ -217,7 +217,7 @@
                    },
                    {
                        "strong":  "per PM direction 2026-11-07 rules (R5g method, R7 inputs):",
-                       "text":  "Sortly wins on tracker lines, also when lower; on a BOM line onsite stays the larger of tracker and Sortly (53 lines where Sortly is higher, 64 where it is lower). 759 Demo for Billing stock counts when a received 759 PO or a DEMO PO booked to ALL covers it (8 of 23 SIDs count). 2FP, 28D, 644, P1D, 62Z and 70X are added from their library BOMs (2FP provisional). E35, 34S and 255 are added with no BOM so their Sortly picks count (per PM direction 2026-11-21: \"Yes, count them\"); they have no fraction. Tool 234 is excluded.",
+                       "text":  "Sortly wins on tracker lines, also when lower; on a BOM line onsite stays the larger of tracker and Sortly (53 lines where Sortly is higher, 65 where it is lower). 759 Demo for Billing stock counts when a received 759 PO or a DEMO PO booked to ALL covers it (8 of 23 SIDs count). 2FP, 28D, 644, P1D, 62Z and 70X are added from their library BOMs (2FP provisional). E35, 34S and 255 are added with no BOM so their Sortly picks count (per PM direction 2026-11-21: \"Yes, count them\"); they have no fraction. Tool 234 is excluded.",
                        "tv":  false,
                        "tv_text":  ""
                    }
@@ -262,13 +262,13 @@
                       {
                           "key":  "comparison",
                           "label":  "Comparison build",
-                          "iso":  "2026-11-21T10:30",
-                          "text":  "Sat Nov 21, 10:30 AM",
+                          "iso":  "2026-11-21T11:44",
+                          "text":  "Sat Nov 21, 11:44 AM",
                           "age_working_days":  0,
                           "stale":  false,
                           "missing":  false,
-                          "status":  "R7a built 11-21 (pending QC)",
-                          "note":  "BOM vs Received / onsite R7a (this week; E35 / 34S / 255 picks mapped)",
+                          "status":  "R7b built 11-21 (pending QC)",
+                          "note":  "BOM vs Received / onsite R7b (this week; E35 / 34S / 255 picks mapped; non-legend tracker greens = received)",
                           "trace":  "by_tool \u0027Source stamp\u0027 (\u0027built\u0027 time)"
                       },
                       {
@@ -1111,8 +1111,8 @@
                                              "tool":  "DEMO",
                                              "lines":  6,
                                              "pos":  1,
-                                             "superseded":  0,
-                                             "open_lines":  6,
+                                             "superseded":  4,
+                                             "open_lines":  2,
                                              "acknowledged":  0,
                                              "eta":  0,
                                              "in_transit":  0,
@@ -1151,9 +1151,9 @@
                                                                "backordered":  false,
                                                                "qty_backordered":  0,
                                                                "overdue":  false,
-                                                               "superseded":  false,
+                                                               "superseded":  true,
                                                                "confidence":  "Med",
-                                                               "status":  "Vendor email, no status",
+                                                               "status":  "Received on the tracker (email status superseded)",
                                                                "as_of":  "2026-11-21 07:24",
                                                                "source":  "overlay",
                                                                "merged_from_supplement":  null
@@ -1238,9 +1238,9 @@
                                                                "backordered":  false,
                                                                "qty_backordered":  0,
                                                                "overdue":  false,
-                                                               "superseded":  false,
+                                                               "superseded":  true,
                                                                "confidence":  "Med",
-                                                               "status":  "Vendor email, no status",
+                                                               "status":  "Received on the tracker (email status superseded)",
                                                                "as_of":  "2026-11-21 07:24",
                                                                "source":  "overlay",
                                                                "merged_from_supplement":  null
@@ -1267,9 +1267,9 @@
                                                                "backordered":  false,
                                                                "qty_backordered":  0,
                                                                "overdue":  false,
-                                                               "superseded":  false,
+                                                               "superseded":  true,
                                                                "confidence":  "Med",
-                                                               "status":  "Vendor email, no status",
+                                                               "status":  "Received on the tracker (email status superseded)",
                                                                "as_of":  "2026-11-21 07:24",
                                                                "source":  "overlay",
                                                                "merged_from_supplement":  null
@@ -1296,9 +1296,9 @@
                                                                "backordered":  false,
                                                                "qty_backordered":  0,
                                                                "overdue":  false,
-                                                               "superseded":  false,
+                                                               "superseded":  true,
                                                                "confidence":  "Med",
-                                                               "status":  "Vendor email, no status",
+                                                               "status":  "Received on the tracker (email status superseded)",
                                                                "as_of":  "2026-11-21 07:24",
                                                                "source":  "overlay",
                                                                "merged_from_supplement":  null
@@ -2591,7 +2591,7 @@
                                        }
                                    ],
                          "sortly_higher_lines":  53,
-                         "sortly_lower_lines":  64
+                         "sortly_lower_lines":  65
                      },
     "schedule_order":  {
                            "board_tools_not_on_schedule":  [
@@ -2690,26 +2690,26 @@
                },
     "sources":  {
                     "by_tool":  {
-                                    "file":  "BOM vs Received comparison 2026-11-21 R7a - By tool.csv",
-                                    "path":  "BOM vs Received comparison 2026-11-21 R7a - By tool.csv",
-                                    "sha256":  "CD22906B14ACD6FCAC7FE0278ACDE785C3F2CB2C1FE499BEF194FEC1D2FF6887",
+                                    "file":  "BOM vs Received comparison 2026-11-21 R7b - By tool.csv",
+                                    "path":  "BOM vs Received comparison 2026-11-21 R7b - By tool.csv",
+                                    "sha256":  "7F4F43CFB4BC1C010EDD5068898ABB8D2077726860F23291183D0C06F77C4DB3",
                                     "rows":  46,
                                     "row_key":  "Tool",
-                                    "status":  "R7a built 11-21 (pending QC)"
+                                    "status":  "R7b built 11-21 (pending QC)"
                                 },
                     "by_line":  {
-                                    "file":  "BOM vs Received comparison 2026-11-21 R7a - By line.csv",
-                                    "path":  "BOM vs Received comparison 2026-11-21 R7a - By line.csv",
-                                    "sha256":  "E27CE4A3026E45558FE0602F651EAF670D56F3836EFF7ABBF67B785E533F9707",
+                                    "file":  "BOM vs Received comparison 2026-11-21 R7b - By line.csv",
+                                    "path":  "BOM vs Received comparison 2026-11-21 R7b - By line.csv",
+                                    "sha256":  "169DCDF85B633FAB973A5A7A9F674203886120D6F5363BC1F9EF6E8CF2A7FE06",
                                     "rows":  11029,
                                     "row_key":  "Line ID",
-                                    "status":  "R7a built 11-21 (pending QC)"
+                                    "status":  "R7b built 11-21 (pending QC)"
                                 },
                     "by_tool_sources":  {
-                                            "file":  "BOM vs Received comparison 2026-11-21 R7a - By tool.sources.csv",
-                                            "path":  "BOM vs Received comparison 2026-11-21 R7a - By tool.sources.csv",
-                                            "sha256":  "1BDE6A3FEE9CF570AEAAA3611124C36006D743F32197D51E6D770516EA4BA18B",
-                                            "status":  "R7a built 11-21 (pending QC)"
+                                            "file":  "BOM vs Received comparison 2026-11-21 R7b - By tool.sources.csv",
+                                            "path":  "BOM vs Received comparison 2026-11-21 R7b - By tool.sources.csv",
+                                            "sha256":  "8B47B9126F5AA8217F05886D5221B5AEF69FFD42BBC6E620617A6E64366BC0FD",
+                                            "status":  "R7b built 11-21 (pending QC)"
                                         },
                     "comparison_stamps_checked":  [
                                                       {
@@ -2751,7 +2751,7 @@
                     "overlay_status":  {
                                            "file":  "overlay_status.csv",
                                            "path":  "overlay_status.csv",
-                                           "sha256":  "86A3A77CA58466B72F69187B61DCF6564A12385616B6E136079B4126EACBB351",
+                                           "sha256":  "B342C6A4945BDABF29CCDD102296762B1CE12C9501073F8B7E86EA26F615DB4B",
                                            "rows":  255,
                                            "row_key":  "data_row (Import-Csv order; same order as overlay Rev 6)",
                                            "status":  "Analyst reader output, build R5g (as R5d, plus Feed tool = Y on the 2FP rows)"
@@ -2825,8 +2825,8 @@
                                  }
                 },
     "builder_sha256":  "BE4F0F6743E48CD580AADE29290B685F9C67E960452B8A5E6B3D8CE76A759ACD",
-    "built_at":  "2026-11-21T10:58:15",
-    "built_at_text":  "Nov 21, 2026, 10:58 AM",
+    "built_at":  "2026-11-21T12:00:53",
+    "built_at_text":  "Nov 21, 2026, 12:00 PM",
     "counts":  {
                    "tools":  46,
                    "schedule_only_tiles":  3,
@@ -2838,13 +2838,13 @@
                    "lines_onsite":  2403,
                    "onsite_evidence":  {
                                            "tracker":  414,
-                                           "sortly":  1779,
-                                           "both":  210
+                                           "sortly":  1777,
+                                           "both":  212
                                        },
                    "lines_any_onsite":  2842,
-                   "lines_received":  605,
+                   "lines_received":  607,
                    "lines_ordered":  636,
-                   "lines_any_receipt":  693,
+                   "lines_any_receipt":  695,
                    "onsite_status":  {
                                          "fully_onsite":  2403,
                                          "partly_onsite":  439,
@@ -7582,7 +7582,7 @@
                                       "cancelled":  0
                                   },
                       "flags":  [
-                                    "Not on the dashboard feed (Tool Status sheet); added at the PM's request (R5e 2026-11-07: 2FP, 28D, \u0027run the comparison if there is something we can add lets do so\u0027; R8 2026-11-21: 644, P1D, 62Z, 70X, R67 BOM tools). Feed columns blank; Foreman to decide whether it goes on the board."
+                                    "Not on the dashboard feed (Tool Status sheet); added with no BOM so its Sortly pick-list picks count (per PM direction 2026-11-21: \u0027Yes, count them\u0027; E35, 34S, 255). No BOM lines, so no fraction; Sortly stock shown for information. Feed columns blank."
                                 ],
                       "provisional":  null,
                       "cross_check":  "",
@@ -10079,12 +10079,12 @@
                       "pct_onsite":  21.7,
                       "onsite_evidence":  {
                                               "tracker":  15,
-                                              "sortly":  105,
-                                              "both":  10
+                                              "sortly":  103,
+                                              "both":  12
                                           },
-                      "lines_received":  25,
-                      "pct_received":  4.2,
-                      "lines_any_receipt":  26,
+                      "lines_received":  27,
+                      "pct_received":  4.5,
+                      "lines_any_receipt":  28,
                       "lines_ordered":  27,
                       "lines_any_order":  29,
                       "lines_not_on_po":  556,
@@ -10099,7 +10099,7 @@
                                   {
                                       "unit":  "ea",
                                       "onsite":  1220,
-                                      "received":  124,
+                                      "received":  144,
                                       "ordered":  144,
                                       "in_sortly":  1099,
                                       "required":  6379
@@ -10161,7 +10161,7 @@
                                         ],
                       "tracker":  {
                                       "lines":  34,
-                                      "fully_received":  27,
+                                      "fully_received":  30,
                                       "matched_to_bom":  12,
                                       "not_on_bom":  22,
                                       "cancelled":  1
@@ -10169,10 +10169,10 @@
                       "flags":  [
                                     "PROVISIONAL: 2F6 requirement is the 2F6 Consolidated BOM 2026-11-18 (E9D51E29; QC-passed 11-18 (in 00 Current); BOM list R8). Its V-2 (SLW-07 = SLW-08, 43 lines / 961 units, both kept) is still open.",
                                     "PO log POs with no 100% date and no tracker lines (no quantities, cannot be matched): 14326-004-2F6VAL-08",
-                                    "2 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
+                                    "3 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 27/34 fully received vs feed (Nov 2 build) 25/25.",
+                      "cross_check":  "Tracker lines this build 30/34 fully received vs feed (Nov 2 build) 25/25.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -10182,9 +10182,9 @@
                       "po_inbox":  {
                                        "lines":  9,
                                        "pos":  5,
-                                       "superseded":  2,
-                                       "open_lines":  7,
-                                       "acknowledged":  7,
+                                       "superseded":  5,
+                                       "open_lines":  4,
+                                       "acknowledged":  4,
                                        "eta":  4,
                                        "in_transit":  0,
                                        "not_shipped_partial":  0,
@@ -10350,9 +10350,9 @@
                                                          "backordered":  false,
                                                          "qty_backordered":  0,
                                                          "overdue":  false,
-                                                         "superseded":  false,
+                                                         "superseded":  true,
                                                          "confidence":  "Med",
-                                                         "status":  "Acknowledged",
+                                                         "status":  "Received on the tracker (email status superseded); Acknowledged",
                                                          "as_of":  "2026-11-21 07:24",
                                                          "source":  "overlay",
                                                          "merged_from_supplement":  null
@@ -10437,9 +10437,9 @@
                                                          "backordered":  false,
                                                          "qty_backordered":  0,
                                                          "overdue":  false,
-                                                         "superseded":  false,
+                                                         "superseded":  true,
                                                          "confidence":  "Med",
-                                                         "status":  "Acknowledged",
+                                                         "status":  "Received on the tracker (email status superseded); Acknowledged",
                                                          "as_of":  "2026-11-21 07:24",
                                                          "source":  "overlay",
                                                          "merged_from_supplement":  null
@@ -10466,9 +10466,9 @@
                                                          "backordered":  false,
                                                          "qty_backordered":  0,
                                                          "overdue":  false,
-                                                         "superseded":  false,
+                                                         "superseded":  true,
                                                          "confidence":  "Med",
-                                                         "status":  "Acknowledged",
+                                                         "status":  "Received on the tracker (email status superseded); Acknowledged",
                                                          "as_of":  "2026-11-21 07:24",
                                                          "source":  "overlay",
                                                          "merged_from_supplement":  null
@@ -10509,6 +10509,17 @@
                                              "onsite":  3,
                                              "required":  1,
                                              "text":  "Sortly lower than PO / tracker received on this line (Sortly 1 \u003c 3): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
+                                         },
+                                         {
+                                             "line_id":  "2F6-0514",
+                                             "by_line_row":  3739,
+                                             "kinds":  [
+                                                           "sortly_lower"
+                                                       ],
+                                             "fully_onsite":  true,
+                                             "onsite":  90,
+                                             "required":  10,
+                                             "text":  "Sortly lower than PO / tracker received on this line (Sortly 18 \u003c 90): onsite = the larger (R5f, per PM direction 2026-11-07: Sortly-wins on tracker lines only)"
                                          }
                                      ],
                       "by_tool_overlay":  {
@@ -10683,7 +10694,9 @@
                                                                                     "2F6-0401",
                                                                                     "2F6-0419",
                                                                                     "2F6-0420",
-                                                                                    "2F6-0459"
+                                                                                    "2F6-0459",
+                                                                                    "2F6-0514",
+                                                                                    "2F6-0515"
                                                                                 ]
                                                 },
                                     "overlay":  {
@@ -12301,7 +12314,7 @@
                                         ],
                       "tracker":  {
                                       "lines":  26,
-                                      "fully_received":  12,
+                                      "fully_received":  13,
                                       "matched_to_bom":  3,
                                       "not_on_bom":  23,
                                       "cancelled":  0
@@ -12311,7 +12324,7 @@
                                     "1 BOM line(s) where Sortly shows less than PO / tracker received: onsite = the larger (R5f; Sortly-wins applies to tracker lines only)."
                                 ],
                       "provisional":  null,
-                      "cross_check":  "Tracker lines this build 12/26 fully received vs feed (Nov 2 build) 2/2. Feed level 3 = Done (everything ordered is received) but only 152/365 BOM lines are fully onsite (41.6%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
+                      "cross_check":  "Tracker lines this build 13/26 fully received vs feed (Nov 2 build) 2/2. Feed level 3 = Done (everything ordered is received) but only 152/365 BOM lines are fully onsite (41.6%): BOM lines not found on a tool PO / tracker line or in Sortly for the tool.",
                       "current_board":  {
                                             "level1":  "Done",
                                             "level2":  "Done",
@@ -12321,13 +12334,13 @@
                       "po_inbox":  {
                                        "lines":  19,
                                        "pos":  8,
-                                       "superseded":  10,
-                                       "open_lines":  9,
-                                       "acknowledged":  9,
+                                       "superseded":  11,
+                                       "open_lines":  8,
+                                       "acknowledged":  8,
                                        "eta":  8,
                                        "in_transit":  0,
                                        "not_shipped_partial":  0,
-                                       "backordered":  3,
+                                       "backordered":  2,
                                        "overdue":  5,
                                        "ordered_not_logged":  0,
                                        "email_only":  8,
@@ -12335,7 +12348,7 @@
                                        "suspect_date":  0,
                                        "exp_date":  0,
                                        "tool_differs":  0,
-                                       "qty_backordered":  16,
+                                       "qty_backordered":  10,
                                        "qty_shipped":  null,
                                        "next_eta":  {
                                                         "date":  "2026-11-24",
@@ -12663,9 +12676,9 @@
                                                          "backordered":  true,
                                                          "qty_backordered":  6,
                                                          "overdue":  false,
-                                                         "superseded":  false,
+                                                         "superseded":  true,
                                                          "confidence":  "High",
-                                                         "status":  "Acknowledged; Backordered 6",
+                                                         "status":  "Received on the tracker (email status superseded); Acknowledged; Backordered 6",
                                                          "as_of":  "2026-11-21 07:24",
                                                          "source":  "overlay",
                                                          "merged_from_supplement":  null
@@ -12930,7 +12943,7 @@
                                          }
                                      ],
                       "by_tool_overlay":  {
-                                              "status_text":  "19 / 8 / 0 / 3 / 5 / 4 of 19 lines with an overlay row",
+                                              "status_text":  "19 / 8 / 0 / 2 / 5 / 5 of 19 lines with an overlay row",
                                               "ordered_lines_added":  0
                                           },
                       "trace":  {
@@ -15560,7 +15573,7 @@
                                       "cancelled":  0
                                   },
                       "flags":  [
-                                    "Not on the dashboard feed (Tool Status sheet); added at the PM's request (R5e 2026-11-07: 2FP, 28D, \u0027run the comparison if there is something we can add lets do so\u0027; R8 2026-11-21: 644, P1D, 62Z, 70X, R67 BOM tools). Feed columns blank; Foreman to decide whether it goes on the board."
+                                    "Not on the dashboard feed (Tool Status sheet); added with no BOM so its Sortly pick-list picks count (per PM direction 2026-11-21: \u0027Yes, count them\u0027; E35, 34S, 255). No BOM lines, so no fraction; Sortly stock shown for information. Feed columns blank."
                                 ],
                       "provisional":  null,
                       "cross_check":  "",
@@ -18671,7 +18684,7 @@
                                       "cancelled":  0
                                   },
                       "flags":  [
-                                    "Not on the dashboard feed (Tool Status sheet); added at the PM's request (R5e 2026-11-07: 2FP, 28D, \u0027run the comparison if there is something we can add lets do so\u0027; R8 2026-11-21: 644, P1D, 62Z, 70X, R67 BOM tools). Feed columns blank; Foreman to decide whether it goes on the board."
+                                    "Not on the dashboard feed (Tool Status sheet); added with no BOM so its Sortly pick-list picks count (per PM direction 2026-11-21: \u0027Yes, count them\u0027; E35, 34S, 255). No BOM lines, so no fraction; Sortly stock shown for information. Feed columns blank."
                                 ],
                       "provisional":  null,
                       "cross_check":  "",
