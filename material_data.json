@@ -41,7 +41,7 @@
                           "label":  "PO log / tracker pull",
                           "iso":  "2026-11-06T11:24",
                           "text":  "Fri Nov 6, 11:24 AM",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "QC passed (11-06 12:14)",
@@ -53,7 +53,7 @@
                           "label":  "Sortly snapshot",
                           "iso":  "2026-11-06T06:40",
                           "text":  "Fri Nov 6, 6:40 AM",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "onsite basis (on hand)",
@@ -65,7 +65,7 @@
                           "label":  "Sortly pick lists, data through",
                           "iso":  "2026-10-30T00:00",
                           "text":  "Fri Oct 30",
-                          "age_working_days":  9,
+                          "age_working_days":  15,
                           "stale":  true,
                           "missing":  false,
                           "status":  "file saved 11-03 14:21; picks after this date are missing",
@@ -77,7 +77,7 @@
                           "label":  "Comparison build",
                           "iso":  "2026-11-07T10:53",
                           "text":  "Sat Nov 7, 10:53 AM",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "QC passed, QA confirmed (R5g)",
@@ -89,7 +89,7 @@
                           "label":  "PO-inbox overlay cutoff",
                           "iso":  "2026-11-06T14:45",
                           "text":  "Fri Nov 6, 2:45 PM",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "released (QC passed, QA confirmed)",
@@ -101,7 +101,7 @@
                           "label":  "Mailbox sweep cutoff",
                           "iso":  "2026-11-06T15:43",
                           "text":  "Fri Nov 6, 3:43 PM",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "QA confirmed (Rev 2)",
@@ -113,7 +113,7 @@
                           "label":  "Tool schedule (order) saved",
                           "iso":  "2026-11-07T12:51",
                           "text":  "Sat Nov 7, 12:51 PM",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "pinned 42802C75; slide order",
@@ -125,7 +125,7 @@
                           "label":  "Tool alias table (238 = 23B)",
                           "iso":  "2026-11-07T00:00",
                           "text":  "Sat Nov 7",
-                          "age_working_days":  4,
+                          "age_working_days":  10,
                           "stale":  true,
                           "missing":  false,
                           "status":  "the PM decision; pinned 7FBD841A",
@@ -137,7 +137,7 @@
                           "label":  "Novus long-lead list dated",
                           "iso":  "2026-10-26T00:00",
                           "text":  "Mon Oct 26",
-                          "age_working_days":  13,
+                          "age_working_days":  19,
                           "stale":  true,
                           "missing":  false,
                           "status":  "owner-furnished; email 11-04",
@@ -2147,8 +2147,8 @@
                     "r67":  {
                                 "file":  "MICRON_Tool_Tracker_FOR_SUITS_R67.xlsx",
                                 "path":  "MICRON_Tool_Tracker_FOR_SUITS_R67.xlsx",
-                                "sha256":  "9E9A4FED299D1C9001DE1FBAD35919B7AFEDE44BF267DC476BF70BA994514761",
-                                "use":  "DDFD status only: Glenn\u0027s Tab column O on the hook-up row (frozen copy, OpenXML)"
+                                "sha256":  "882C0B9BB4DCF17F5E6F3D957AE27BFD82ADA07136D68DC47FD47681DD98DE4B",
+                                "use":  "DDFD status (Glenn\u0027s Tab column O, hook-up row) and, from Rev F6, BOM status / Book Sent (Tool List I / O); frozen copy, OpenXML"
                             },
                     "schedule":  {
                                      "file":  "Tool Schedule.xlsx",
@@ -2159,9 +2159,9 @@
                                      "use":  "tile order only (read-only, OpenXML)"
                                  }
                 },
-    "builder_sha256":  "E7C7D0F0F5F8D7CA11C4802935C76666B4B1355ABA5AA7359D3D3101AA50DAF8",
-    "built_at":  "2026-11-12T06:10:51",
-    "built_at_text":  "Nov 12, 2026, 6:10 AM",
+    "builder_sha256":  "1D47DB1A0AAA3F188BD29D189270B093CB853BA4C9DEB75FF5FD6758B02DB331",
+    "built_at":  "2026-11-21T04:09:57",
+    "built_at_text":  "Nov 21, 2026, 4:09 AM",
     "counts":  {
                    "tools":  39,
                    "schedule_only_tiles":  5,
@@ -2191,6 +2191,304 @@
                    "lines_not_on_po":  5906,
                    "trace":  "sum over tools[] of the same field (each tool traces to its by_tool row and by_line rows)"
                },
+    "r67_bom":  {
+                    "rule":  "R67 is the master (11-21): BOM status and Book Sent from R67 Tool List I / O; library BOM figures unchanged; Complete with no comparison figures reads n/a",
+                    "source":  "R67 Tool List columns I / O (frozen copy)",
+                    "applied":  [
+                                    {
+                                        "tool":  "79X",
+                                        "row":  13,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "90D",
+                                        "row":  14,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "12X",
+                                        "row":  10,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "28E",
+                                        "row":  12,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "2F6",
+                                        "row":  15,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "759",
+                                        "row":  16,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "70Y",
+                                        "row":  17,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "26V",
+                                        "row":  18,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "62W",
+                                        "row":  19,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "K54",
+                                        "row":  11,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "25X",
+                                        "row":  20,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "143",
+                                        "row":  24,
+                                        "bom":  "No Drawings",
+                                        "book":  "Not Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "A63",
+                                        "row":  22,
+                                        "bom":  "No Drawings",
+                                        "book":  "Not Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "BB5",
+                                        "row":  28,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "2FQ",
+                                        "row":  23,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "52D",
+                                        "row":  34,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "229",
+                                        "row":  30,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "231",
+                                        "row":  27,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "245",
+                                        "row":  31,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "363",
+                                        "row":  21,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "903",
+                                        "row":  26,
+                                        "bom":  "No Drawings",
+                                        "book":  "Not Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "H25",
+                                        "row":  25,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "K13",
+                                        "row":  29,
+                                        "bom":  "No Drawings",
+                                        "book":  "Not Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "L33",
+                                        "row":  33,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "L59",
+                                        "row":  32,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "partial"
+                                    },
+                                    {
+                                        "tool":  "82C",
+                                        "row":  45,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "M57",
+                                        "row":  43,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "044",
+                                        "row":  46,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "M59",
+                                        "row":  44,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "P49",
+                                        "row":  42,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "2DE",
+                                        "row":  47,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "40S",
+                                        "row":  38,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "88D",
+                                        "row":  39,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "23B",
+                                        "row":  35,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "E51",
+                                        "row":  36,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "3AM",
+                                        "row":  37,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "none"
+                                    },
+                                    {
+                                        "tool":  "2FP",
+                                        "row":  9,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    },
+                                    {
+                                        "tool":  "28D",
+                                        "row":  8,
+                                        "bom":  "Complete",
+                                        "book":  "Sent",
+                                        "library_bom_status":  "full"
+                                    }
+                                ],
+                    "left_as_is":  [
+                                       {
+                                           "tool":  "2DQ",
+                                           "reason":  "not on R67 Tool List: left as is"
+                                       },
+                                       {
+                                           "tool":  "2G6",
+                                           "reason":  "schedule-only tile: left as is"
+                                       },
+                                       {
+                                           "tool":  "E35",
+                                           "reason":  "schedule-only tile: left as is"
+                                       },
+                                       {
+                                           "tool":  "905",
+                                           "reason":  "schedule-only tile: left as is"
+                                       },
+                                       {
+                                           "tool":  "F28",
+                                           "reason":  "schedule-only tile: left as is"
+                                       },
+                                       {
+                                           "tool":  "34S",
+                                           "reason":  "schedule-only tile: left as is"
+                                       }
+                                   ]
+                },
     "ddfd":  {
                  "rule":  "per PM direction 2026-11-07: \"if the tool is ddfd in r67 then I want it to be highlighted green with some kind of complete written in the bubble\"",
                  "source":  "R67 Glenn\u0027s Tab column O, hook-up row (frozen copy)",
@@ -2845,7 +3143,14 @@
                                    "r67_tool":  "2DE",
                                    "project":  "C-0051191 (NOVUS T\u0026M)",
                                    "source":  "R67 Glenn\u0027s Tab row 57, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  47,
+                                      "source":  "Tool List row 47, columns I / O"
+                                  }
                   },
                   {
                       "order":  2,
@@ -3070,7 +3375,14 @@
                                    "r67_tool":  "23B",
                                    "project":  "C-0051193 (NOVUS)",
                                    "source":  "R67 Glenn\u0027s Tab row 45, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  35,
+                                      "source":  "Tool List row 35, columns I / O"
+                                  }
                   },
                   {
                       "order":  3,
@@ -3152,7 +3464,8 @@
                                      "basis":  "Before Thanksgiving (Thanksgiving 2026 is Thu 2026-11-26; \"before Thanksgiving\" = by Wed 2026-11-25)",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  null
                   },
                   {
                       "order":  4,
@@ -3279,7 +3592,7 @@
                                                                   ],
                                                         "suspect_lines":  0,
                                                         "low_lines":  0,
-                                                        "passed_since_cutoff":  false
+                                                        "passed_since_cutoff":  true
                                                     },
                                        "items":  [
                                                      {
@@ -3625,7 +3938,14 @@
                                      "basis":  "Before Thanksgiving (Thanksgiving 2026 is Thu 2026-11-26; \"before Thanksgiving\" = by Wed 2026-11-25)",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  9,
+                                      "source":  "Tool List row 9, columns I / O"
+                                  }
                   },
                   {
                       "order":  5,
@@ -4075,7 +4395,14 @@
                                      "basis":  "Before Thanksgiving (Thanksgiving 2026 is Thu 2026-11-26; \"before Thanksgiving\" = by Wed 2026-11-25)",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  39,
+                                      "source":  "Tool List row 39, columns I / O"
+                                  }
                   },
                   {
                       "order":  6,
@@ -4331,7 +4658,14 @@
                                      "basis":  "Before Thanksgiving (Thanksgiving 2026 is Thu 2026-11-26; \"before Thanksgiving\" = by Wed 2026-11-25)",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  8,
+                                      "source":  "Tool List row 8, columns I / O"
+                                  }
                   },
                   {
                       "order":  7,
@@ -4442,7 +4776,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  37,
+                                      "source":  "Tool List row 37, columns I / O"
+                                  }
                   },
                   {
                       "order":  8,
@@ -4562,7 +4903,7 @@
                                                                   ],
                                                         "suspect_lines":  0,
                                                         "low_lines":  0,
-                                                        "passed_since_cutoff":  false
+                                                        "passed_since_cutoff":  true
                                                     },
                                        "items":  [
                                                      {
@@ -4904,7 +5245,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  18,
+                                      "source":  "Tool List row 18, columns I / O"
+                                  }
                   },
                   {
                       "order":  9,
@@ -5422,7 +5770,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  14,
+                                      "source":  "Tool List row 14, columns I / O"
+                                  }
                   },
                   {
                       "order":  10,
@@ -5504,7 +5859,8 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  null
                   },
                   {
                       "order":  11,
@@ -5586,7 +5942,8 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  null
                   },
                   {
                       "order":  12,
@@ -5679,7 +6036,7 @@
                                                                   ],
                                                         "suspect_lines":  0,
                                                         "low_lines":  0,
-                                                        "passed_since_cutoff":  false
+                                                        "passed_since_cutoff":  true
                                                     },
                                        "items":  [
                                                      {
@@ -6304,7 +6661,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  38,
+                                      "source":  "Tool List row 38, columns I / O"
+                                  }
                   },
                   {
                       "order":  13,
@@ -6482,7 +6846,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  34,
+                                      "source":  "Tool List row 34, columns I / O"
+                                  }
                   },
                   {
                       "order":  14,
@@ -7031,7 +7402,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  16,
+                                      "source":  "Tool List row 16, columns I / O"
+                                  }
                   },
                   {
                       "order":  15,
@@ -7528,7 +7906,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  15,
+                                      "source":  "Tool List row 15, columns I / O"
+                                  }
                   },
                   {
                       "order":  16,
@@ -7698,7 +8083,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  23,
+                                      "source":  "Tool List row 23, columns I / O"
+                                  }
                   },
                   {
                       "order":  17,
@@ -8133,7 +8525,14 @@
                                      "basis":  "Before Christmas (Christmas 2026 is Fri 2026-12-25; the 11-03 holiday targets list no-work days 12/24 to 1/4/27; per PM direction 2026-11-07: \"you can put 12/23 as due date\")",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  17,
+                                      "source":  "Tool List row 17, columns I / O"
+                                  }
                   },
                   {
                       "order":  18,
@@ -8264,7 +8663,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  32,
+                                      "source":  "Tool List row 32, columns I / O"
+                                  }
                   },
                   {
                       "order":  19,
@@ -8724,7 +9130,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  25,
+                                      "source":  "Tool List row 25, columns I / O"
+                                  }
                   },
                   {
                       "order":  20,
@@ -9175,7 +9588,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  36,
+                                      "source":  "Tool List row 36, columns I / O"
+                                  }
                   },
                   {
                       "order":  21,
@@ -9257,7 +9677,8 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  null
                   },
                   {
                       "order":  22,
@@ -9478,7 +9899,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  21,
+                                      "source":  "Tool List row 21, columns I / O"
+                                  }
                   },
                   {
                       "order":  23,
@@ -9767,7 +10195,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  30,
+                                      "source":  "Tool List row 30, columns I / O"
+                                  }
                   },
                   {
                       "order":  24,
@@ -9872,7 +10307,7 @@
                                                                   ],
                                                         "suspect_lines":  0,
                                                         "low_lines":  0,
-                                                        "passed_since_cutoff":  false
+                                                        "passed_since_cutoff":  true
                                                     },
                                        "items":  [
                                                      {
@@ -9970,7 +10405,8 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  null
                   },
                   {
                       "order":  25,
@@ -10341,7 +10777,8 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  null
                   },
                   {
                       "order":  26,
@@ -10438,7 +10875,7 @@
                                                                   ],
                                                         "suspect_lines":  1,
                                                         "low_lines":  0,
-                                                        "passed_since_cutoff":  false
+                                                        "passed_since_cutoff":  true
                                                     },
                                        "items":  [
                                                      {
@@ -10566,7 +11003,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  28,
+                                      "source":  "Tool List row 28, columns I / O"
+                                  }
                   },
                   {
                       "order":  27,
@@ -10690,7 +11134,14 @@
                                      "basis":  "After Holidays: FS from the schedule",
                                      "on_schedule":  true
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  33,
+                                      "source":  "Tool List row 33, columns I / O"
+                                  }
                   },
                   {
                       "order":  28,
@@ -10844,7 +11295,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  46,
+                                      "source":  "Tool List row 46, columns I / O"
+                                  }
                   },
                   {
                       "order":  29,
@@ -11218,7 +11676,14 @@
                                    "r67_tool":  "12X",
                                    "project":  "C-0051095",
                                    "source":  "R67 Glenn\u0027s Tab row 20, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  10,
+                                      "source":  "Tool List row 10, columns I / O"
+                                  }
                   },
                   {
                       "order":  30,
@@ -11346,7 +11811,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "No Drawings",
+                                      "book":  "Not Sent",
+                                      "complete":  false,
+                                      "row":  24,
+                                      "source":  "Tool List row 24, columns I / O"
+                                  }
                   },
                   {
                       "order":  31,
@@ -11588,7 +12060,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  27,
+                                      "source":  "Tool List row 27, columns I / O"
+                                  }
                   },
                   {
                       "order":  32,
@@ -11671,7 +12150,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  31,
+                                      "source":  "Tool List row 31, columns I / O"
+                                  }
                   },
                   {
                       "order":  33,
@@ -11843,7 +12329,14 @@
                                    "r67_tool":  "25X",
                                    "project":  "",
                                    "source":  "R67 Glenn\u0027s Tab row 30, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  20,
+                                      "source":  "Tool List row 20, columns I / O"
+                                  }
                   },
                   {
                       "order":  34,
@@ -12003,7 +12496,14 @@
                                    "r67_tool":  "28E",
                                    "project":  "C-0051291",
                                    "source":  "R67 Glenn\u0027s Tab row 22, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  12,
+                                      "source":  "Tool List row 12, columns I / O"
+                                  }
                   },
                   {
                       "order":  35,
@@ -12151,7 +12651,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  19,
+                                      "source":  "Tool List row 19, columns I / O"
+                                  }
                   },
                   {
                       "order":  36,
@@ -12319,7 +12826,14 @@
                                    "r67_tool":  "79X",
                                    "project":  "C-0051134",
                                    "source":  "R67 Glenn\u0027s Tab row 23, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  13,
+                                      "source":  "Tool List row 13, columns I / O"
+                                  }
                   },
                   {
                       "order":  37,
@@ -13102,7 +13616,14 @@
                                    "r67_tool":  "82C",
                                    "project":  "C-0051131 (NOVUS T\u0026M)",
                                    "source":  "R67 Glenn\u0027s Tab row 55, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  45,
+                                      "source":  "Tool List row 45, columns I / O"
+                                  }
                   },
                   {
                       "order":  38,
@@ -13221,7 +13742,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "No Drawings",
+                                      "book":  "Not Sent",
+                                      "complete":  false,
+                                      "row":  26,
+                                      "source":  "Tool List row 26, columns I / O"
+                                  }
                   },
                   {
                       "order":  39,
@@ -13340,7 +13868,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "No Drawings",
+                                      "book":  "Not Sent",
+                                      "complete":  false,
+                                      "row":  22,
+                                      "source":  "Tool List row 22, columns I / O"
+                                  }
                   },
                   {
                       "order":  40,
@@ -13466,7 +14001,14 @@
                                      "basis":  "not on the Tool Schedule",
                                      "on_schedule":  false
                                  },
-                      "ddfd":  null
+                      "ddfd":  null,
+                      "r67_bom":  {
+                                      "bom":  "No Drawings",
+                                      "book":  "Not Sent",
+                                      "complete":  false,
+                                      "row":  29,
+                                      "source":  "Tool List row 29, columns I / O"
+                                  }
                   },
                   {
                       "order":  41,
@@ -13897,7 +14439,14 @@
                                    "r67_tool":  "K54",
                                    "project":  "C-0050852",
                                    "source":  "R67 Glenn\u0027s Tab row 21, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  11,
+                                      "source":  "Tool List row 11, columns I / O"
+                                  }
                   },
                   {
                       "order":  42,
@@ -13997,7 +14546,14 @@
                                    "r67_tool":  "M57",
                                    "project":  "E-0051923 (NOVUS T\u0026M)",
                                    "source":  "R67 Glenn\u0027s Tab row 53, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  43,
+                                      "source":  "Tool List row 43, columns I / O"
+                                  }
                   },
                   {
                       "order":  43,
@@ -14131,7 +14687,14 @@
                                    "r67_tool":  "M59",
                                    "project":  "E-0051924 (NOVUS T\u0026M)",
                                    "source":  "R67 Glenn\u0027s Tab row 54, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  44,
+                                      "source":  "Tool List row 44, columns I / O"
+                                  }
                   },
                   {
                       "order":  44,
@@ -14235,7 +14798,14 @@
                                    "r67_tool":  "P49",
                                    "project":  "C-0051128 (NOVUS T\u0026M)",
                                    "source":  "R67 Glenn\u0027s Tab row 52, column O"
-                               }
+                               },
+                      "r67_bom":  {
+                                      "bom":  "Complete",
+                                      "book":  "Sent",
+                                      "complete":  true,
+                                      "row":  42,
+                                      "source":  "Tool List row 42, columns I / O"
+                                  }
                   }
               ]
 }
